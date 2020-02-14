@@ -1,0 +1,16 @@
+Definition of Done
+
+
+-   The code should be aviable in git
+*   There should be code reviews before pushing/merging
+*   We should work with braches
+
+-   We should have a working kanbanboard 
+*   We should have a backlog
+
+
+-   We need at least 3 possible features:
+*   Reservatio of avialable chairs
+*   Price depends on the chair location
+*   Overview of the current movies
+
