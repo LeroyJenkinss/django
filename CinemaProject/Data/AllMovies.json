@@ -1,0 +1,12 @@
+[         
+            {
+                "id" : 1,
+                "name" : "Sonic",
+                "releaseDate" : "2020-02-13"
+            }, 
+            {                
+                "id" : 2,
+                "name" : "Birds Of Prey",
+                "releaseDate" : "2020-02-06"
+            }    
+    ]
