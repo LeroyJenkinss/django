@@ -41,7 +41,7 @@
             this.grid.Controls.Add(this.movieList, 1, 1);
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid.Location = new System.Drawing.Point(0, 0);
-            this.grid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grid.Margin = new System.Windows.Forms.Padding(4);
             this.grid.Name = "grid";
             this.grid.RowCount = 2;
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.88889F));
@@ -55,11 +55,12 @@
             this.movieList.FormattingEnabled = true;
             this.movieList.ItemHeight = 16;
             this.movieList.Location = new System.Drawing.Point(233, 69);
-            this.movieList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.movieList.Margin = new System.Windows.Forms.Padding(4);
             this.movieList.Name = "movieList";
             this.movieList.Size = new System.Drawing.Size(159, 116);
             this.movieList.TabIndex = 1;
             this.movieList.SelectedIndexChanged += new System.EventHandler(this.ListMovies);
+            this.movieList.DoubleClick += new System.EventHandler(this.movieList_DoubleClick);
             // 
             // MainForm
             // 
@@ -67,7 +68,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 601);
             this.Controls.Add(this.grid);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.grid.ResumeLayout(false);

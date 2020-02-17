@@ -10,3 +10,15 @@ C:\Development\Personal\Projecten\Project 2 - Bitches For The Money\django\Cinem
 C:\Development\Personal\Projecten\Project 2 - Bitches For The Money\django\CinemaProject\bin\Debug\Newtonsoft.Json.xml
 C:\Development\Personal\Projecten\Project 2 - Bitches For The Money\django\CinemaProject\obj\Debug\CinemaProject.csproj.CopyComplete
 C:\Development\Personal\Projecten\Project 2 - Bitches For The Money\django\CinemaProject\obj\Debug\CinemaProject.MainForm.resources
+C:\Schoolstuff\ProjectB\CinemaProject\bin\Debug\CinemaProject.exe.config
+C:\Schoolstuff\ProjectB\CinemaProject\bin\Debug\CinemaProject.exe
+C:\Schoolstuff\ProjectB\CinemaProject\bin\Debug\CinemaProject.pdb
+C:\Schoolstuff\ProjectB\CinemaProject\bin\Debug\Newtonsoft.Json.dll
+C:\Schoolstuff\ProjectB\CinemaProject\bin\Debug\Newtonsoft.Json.xml
+C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.csprojAssemblyReference.cache
+C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.Properties.Resources.resources
+C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.MainForm.resources
+C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.csproj.GenerateResource.cache
+C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.csproj.CopyComplete
+C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.exe
+C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.pdb

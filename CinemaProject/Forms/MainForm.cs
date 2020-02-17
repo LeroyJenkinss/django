@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,12 +29,21 @@ namespace CinemaProject
             foreach (MovieView i in allMovies)
             {
                 movieList.Items.Add(i.Name);
+                movieList.Items.Add(i.Genre);
+                
             }
 
 
         }
         private void ListMovies(object sender, EventArgs e)
         {
+        }
+
+        private void movieList_DoubleClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Faka drerrie");
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            Process.Start(sInfo);
         }
     }
 }
