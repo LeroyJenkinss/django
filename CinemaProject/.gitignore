@@ -347,9 +347,14 @@ ASALocalRun/
 .localhistory/
 
 # BeatPulse healthcheck temp database
-healthchecksdb
+healthchecksdbgit s
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+
+CinemaProject/bin/
+CinemaProject/obj/
+CinemaProject/.vs/CinemaProject/v16/Server/sqlite3/
+
 
 # End of https://www.gitignore.io/api/visualstudio
