@@ -21,7 +21,7 @@ namespace CinemaProject.Model.Repository
             using (StreamReader r = new StreamReader(pathToJsonFile))
             {
                 string json = r.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<ChairView>>(json);
+                items = JsonConvert.DeserializeObject<List<ChairView>(json);
 
             }
             return items;
