@@ -1,0 +1,21 @@
+Definition of Done
+
+
+-   The code should be aviable in git
+*   There should be code reviews before pushing/merging
+*   We should work with branches
+*   The code should be tested before pushing/merging
+*   Mergeconflicts should be discussed
+*   An approval of the design should be agreed on before coding
+
+-   We should have a working kanbanboard 
+*   We should have a backlog
+*   The backlog should consist of tickets for each functionality
+*   Every ticket is appointed to one developer. Which every member should agree on.
+*   Every ticket is described from an user viewpoint
+
+-   We need at least 3 possible features:
+*   Placing an order with the avaiable chairs
+*   Price depends on the chair location
+*   Overview of the current movies
+
