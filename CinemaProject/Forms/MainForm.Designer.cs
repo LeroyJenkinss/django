@@ -30,6 +30,7 @@
         {
             this.grid = new System.Windows.Forms.TableLayoutPanel();
             this.movieList = new System.Windows.Forms.ListBox();
+            this.chairsList = new System.Windows.Forms.ListBox();
             this.grid.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,7 +39,8 @@
             this.grid.ColumnCount = 2;
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 852F));
-            this.grid.Controls.Add(this.movieList, 1, 1);
+            this.grid.Controls.Add(this.movieList, 0, 1);
+            this.grid.Controls.Add(this.chairsList, 1, 1);
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid.Location = new System.Drawing.Point(0, 0);
             this.grid.Margin = new System.Windows.Forms.Padding(4);
@@ -54,13 +56,23 @@
             // 
             this.movieList.FormattingEnabled = true;
             this.movieList.ItemHeight = 16;
-            this.movieList.Location = new System.Drawing.Point(233, 69);
+            this.movieList.Location = new System.Drawing.Point(4, 69);
             this.movieList.Margin = new System.Windows.Forms.Padding(4);
             this.movieList.Name = "movieList";
             this.movieList.Size = new System.Drawing.Size(159, 116);
             this.movieList.TabIndex = 1;
             this.movieList.SelectedIndexChanged += new System.EventHandler(this.ListMovies);
             this.movieList.DoubleClick += new System.EventHandler(this.movieList_DoubleClick);
+            // 
+            // chairsList
+            // 
+            this.chairsList.FormattingEnabled = true;
+            this.chairsList.ItemHeight = 16;
+            this.chairsList.Location = new System.Drawing.Point(232, 68);
+            this.chairsList.Name = "chairsList";
+            this.chairsList.Size = new System.Drawing.Size(120, 84);
+            this.chairsList.TabIndex = 2;
+            this.chairsList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // MainForm
             // 
@@ -81,7 +93,7 @@
         private System.Windows.Forms.TableLayoutPanel grid;
         private System.Windows.Forms.ListBox movieList;
         private System.Windows.Forms.ListBox chairList;
-
+        private System.Windows.Forms.ListBox chairsList;
     }
 }
 

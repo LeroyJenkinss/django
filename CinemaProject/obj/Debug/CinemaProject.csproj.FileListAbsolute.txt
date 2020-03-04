@@ -22,3 +22,15 @@ C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.csproj.GenerateRes
 C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.csproj.CopyComplete
 C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.exe
 C:\Schoolstuff\ProjectB\CinemaProject\obj\Debug\CinemaProject.pdb
+C:\Schoolstuff\PorjectB2\django\CinemaProject\bin\Debug\CinemaProject.exe.config
+C:\Schoolstuff\PorjectB2\django\CinemaProject\bin\Debug\CinemaProject.exe
+C:\Schoolstuff\PorjectB2\django\CinemaProject\bin\Debug\CinemaProject.pdb
+C:\Schoolstuff\PorjectB2\django\CinemaProject\bin\Debug\Newtonsoft.Json.dll
+C:\Schoolstuff\PorjectB2\django\CinemaProject\bin\Debug\Newtonsoft.Json.xml
+C:\Schoolstuff\PorjectB2\django\CinemaProject\obj\Debug\CinemaProject.csprojAssemblyReference.cache
+C:\Schoolstuff\PorjectB2\django\CinemaProject\obj\Debug\CinemaProject.Properties.Resources.resources
+C:\Schoolstuff\PorjectB2\django\CinemaProject\obj\Debug\CinemaProject.MainForm.resources
+C:\Schoolstuff\PorjectB2\django\CinemaProject\obj\Debug\CinemaProject.csproj.GenerateResource.cache
+C:\Schoolstuff\PorjectB2\django\CinemaProject\obj\Debug\CinemaProject.csproj.CopyComplete
+C:\Schoolstuff\PorjectB2\django\CinemaProject\obj\Debug\CinemaProject.exe
+C:\Schoolstuff\PorjectB2\django\CinemaProject\obj\Debug\CinemaProject.pdb
