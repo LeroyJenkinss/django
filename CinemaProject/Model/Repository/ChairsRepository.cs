@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace CinemaProject.Model.Repository
 {
-    class ChairsRepository
+    public class ChairsRepository
     {
         public List<ChairView> GetAll()
         {
@@ -26,10 +26,23 @@ namespace CinemaProject.Model.Repository
             }
             return items;
         }
+        public void AddChiars(int id, float price)
+        {
+            var allChairs = GetAll();
+            var newId = allChairs.Max(x => x.Id);
+            var chairToAdd = new ChairView(newId, price);
+            allChairs.Append(chairToAdd);
+
+            var json = JsonConvert.SerializeObject(allChairs);
+
+            var pathToJsonFile = GetPathToJson();
+            File.WriteAllText(pathToJsonFile, json);
+        }
+
         public string GetPathToJson()
         {
             string workingDirectory = Environment.CurrentDirectory;
-            var pathToJsonFile = Directory.GetParent(workingDirectory).Parent.FullName + @"\Data\AllMovies.json";
+            var pathToJsonFile = Directory.GetParent(workingDirectory).Parent.FullName + @"\Data\AllChairs.json";
 
             return pathToJsonFile;
         }

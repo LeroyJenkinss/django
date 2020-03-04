@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CinemaProject.View
 {
-    class ChairView
+   public class ChairView
     {
         public int Id;
         public float Price;

@@ -30,6 +30,7 @@
         {
             this.grid = new System.Windows.Forms.TableLayoutPanel();
             this.movieList = new System.Windows.Forms.ListBox();
+            this.chairList = new System.Windows.Forms.ListBox();
             this.grid.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,6 +40,7 @@
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 852F));
             this.grid.Controls.Add(this.movieList, 1, 1);
+            this.grid.Controls.Add(this.chairList, 0, 1);
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid.Location = new System.Drawing.Point(0, 0);
             this.grid.Margin = new System.Windows.Forms.Padding(4);
@@ -62,6 +64,15 @@
             this.movieList.SelectedIndexChanged += new System.EventHandler(this.ListMovies);
             this.movieList.DoubleClick += new System.EventHandler(this.movieList_DoubleClick);
             // 
+            // listBox1
+            // 
+            this.chairList.FormattingEnabled = true;
+            this.chairList.ItemHeight = 16;
+            this.chairList.Location = new System.Drawing.Point(3, 68);
+            this.chairList.Name = "listBox1";
+            this.chairList.Size = new System.Drawing.Size(120, 84);
+            this.chairList.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -80,6 +91,7 @@
 
         private System.Windows.Forms.TableLayoutPanel grid;
         private System.Windows.Forms.ListBox movieList;
+        private System.Windows.Forms.ListBox chairList;
     }
 }
 
