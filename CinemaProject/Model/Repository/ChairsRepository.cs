@@ -21,11 +21,19 @@ namespace CinemaProject.Model.Repository
             using (StreamReader r = new StreamReader(pathToJsonFile))
             {
                 string json = r.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<ChairView>(json);
+                items = JsonConvert.DeserializeObject<List<ChairView>>(json);
+                
+
 
             }
             return items;
         }
+
+        private int List<T>(string json)
+        {
+            throw new NotImplementedException();
+        }
+
         public void AddChiars(int id, float price)
         {
             var allChairs = GetAll();
