@@ -14,12 +14,12 @@ namespace CinemaProject.View
         public string Genre;
 
         public MovieView(
-            int id,
+            int id_Movie,
             string name,
             string genre,
             DateTime releaseDate)
         {
-            Id_Movie = id;
+            Id_Movie = id_Movie;
             Name = name;
             Genre = genre;
             ReleaseDate = releaseDate;

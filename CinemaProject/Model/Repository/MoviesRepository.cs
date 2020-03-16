@@ -30,7 +30,7 @@ namespace CinemaProject.Model.Repository
         public void AddMovie(string movieTitle, DateTime releaseDate,string genre)
         {
             var allMovies = GetAll();
-            var newId = allMovies.Max(x => x.Id);
+            var newId = allMovies.Max(x => x.Id_Movie);
             var movieToAdd = new MovieView(newId, movieTitle, genre, releaseDate);
             allMovies.Append(movieToAdd);
 

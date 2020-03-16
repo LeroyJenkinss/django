@@ -9,20 +9,20 @@ namespace CinemaProject.View
     public class ShowTimeView
     {
         public int Id_Showtime;
-        public string Name;
-        public DateTime ReleaseDate;
-        public string Genre;
+        public int Id_Movie;
+        public DateTime DateTime;
+        public Array TakenChairs;
 
-        public MovieView(
-            int id,
-            string name,
-            string genre,
-            DateTime releaseDate)
+        public ShowTimeView(
+            int id_showtime,
+            int id_movie,
+            DateTime dateTime,
+            Array takenChairs)
         {
-            Id = id;
-            Name = name;
-            Genre = genre;
-            ReleaseDate = releaseDate;
+            Id_Showtime = id_showtime;
+            Id_Movie = id_movie;
+            DateTime = dateTime;
+            TakenChairs = takenChairs;
         }
     }
 }
