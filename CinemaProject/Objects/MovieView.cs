@@ -8,7 +8,7 @@ namespace CinemaProject.View
 {
     public class MovieView
     {
-        public int Id;
+        public int Id_Movie;
         public string Name;
         public DateTime ReleaseDate;
         public string Genre;
@@ -19,7 +19,7 @@ namespace CinemaProject.View
             string genre,
             DateTime releaseDate)
         {
-            Id = id;
+            Id_Movie = id;
             Name = name;
             Genre = genre;
             ReleaseDate = releaseDate;
