@@ -41,9 +41,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 42);
+            this.label1.Location = new System.Drawing.Point(16, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -51,27 +52,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 69);
+            this.label2.Location = new System.Drawing.Point(16, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Lastname";
             // 
             // numberOfPeople
             // 
             this.numberOfPeople.FormattingEnabled = true;
-            this.numberOfPeople.Location = new System.Drawing.Point(312, 91);
+            this.numberOfPeople.Location = new System.Drawing.Point(416, 112);
+            this.numberOfPeople.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numberOfPeople.Name = "numberOfPeople";
-            this.numberOfPeople.Size = new System.Drawing.Size(121, 21);
+            this.numberOfPeople.Size = new System.Drawing.Size(160, 24);
             this.numberOfPeople.TabIndex = 2;
             this.numberOfPeople.SelectedIndexChanged += new System.EventHandler(this.numberOfPeople_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 94);
+            this.label3.Location = new System.Drawing.Point(16, 116);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 13);
+            this.label3.Size = new System.Drawing.Size(269, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Number of guests to make an reservation";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -79,44 +83,48 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 145);
+            this.label4.Location = new System.Drawing.Point(16, 178);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.Size = new System.Drawing.Size(49, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Seat 1";
             // 
             // person1
             // 
             this.person1.FormattingEnabled = true;
-            this.person1.Location = new System.Drawing.Point(312, 142);
+            this.person1.Location = new System.Drawing.Point(416, 175);
+            this.person1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.person1.Name = "person1";
-            this.person1.Size = new System.Drawing.Size(121, 21);
+            this.person1.Size = new System.Drawing.Size(160, 24);
             this.person1.TabIndex = 5;
             this.person1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // person2
             // 
             this.person2.FormattingEnabled = true;
-            this.person2.Location = new System.Drawing.Point(312, 179);
+            this.person2.Location = new System.Drawing.Point(416, 220);
+            this.person2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.person2.Name = "person2";
-            this.person2.Size = new System.Drawing.Size(121, 21);
+            this.person2.Size = new System.Drawing.Size(160, 24);
             this.person2.TabIndex = 8;
             this.person2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 182);
+            this.label5.Location = new System.Drawing.Point(16, 224);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(49, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Seat 2";
             // 
             // ReservationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.person2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.person1);
@@ -125,6 +133,7 @@
             this.Controls.Add(this.numberOfPeople);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ReservationForm";
             this.Text = "ReservationForm";
             this.Load += new System.EventHandler(this.ReservationForm_Load);

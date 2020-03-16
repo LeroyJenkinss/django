@@ -34,6 +34,16 @@ namespace CinemaProject.Model.Forms
                 
 
             }
+            var maxPeople = new string[] { "1", "2", "3", "4", "5" }; 
+            foreach (var item in maxPeople) 
+            {
+                numberOfPeople.Items.Add(item);  
+                    }
+            //numberOfPeople.Items.Add("2");
+            //numberOfPeople.Items.Add("3");
+            //numberOfPeople.Items.Add("4");
+            //numberOfPeople.Items.Add("5");
+            //numberOfPeople.Text = "Number of people ...";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -51,13 +61,17 @@ namespace CinemaProject.Model.Forms
 
         }
 
+      
+         
         private void numberOfPeople_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
+
             var reservationQuantity = int.Parse(numberOfPeople.Text);
             var counter = 0;
             while (counter <= reservationQuantity)
             {
-                switch (reservationQuantity)
+                switch (counter)
                 {
                     case 1:
                         person1.Visible = true;
@@ -77,6 +91,7 @@ namespace CinemaProject.Model.Forms
                     default:
                         break;
                 }
+                counter += 1;
             }
         }
 
