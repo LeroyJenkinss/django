@@ -25,8 +25,24 @@ namespace CinemaProject.Model.Forms
         private void ReservationForm_Load(object sender, EventArgs e)
         {
             var allShowtimes = _showTimeRepository.GetAll();
+            selectRow.Visible = false;
+            SelectSeatNr.Visible = false;
             person1.Visible = false;
             person2.Visible = false;
+            person3.Visible = false;
+            person4.Visible = false;
+            person5.Visible = false;
+            person11.Visible = false;
+            person22.Visible = false;
+            person33.Visible = false;
+            person44.Visible = false;
+            person55.Visible = false;
+            seat1.Visible = false;
+            seat2.Visible = false;
+            seat3.Visible = false;
+            seat4.Visible = false;
+            seat5.Visible = false;
+
 
             foreach (ShowTimeView i in allShowtimes)
             {
@@ -37,13 +53,9 @@ namespace CinemaProject.Model.Forms
             var maxPeople = new string[] { "1", "2", "3", "4", "5" }; 
             foreach (var item in maxPeople) 
             {
+                numberOfPeople.Text = "Number of people ...";
                 numberOfPeople.Items.Add(item);  
                     }
-            //numberOfPeople.Items.Add("2");
-            //numberOfPeople.Items.Add("3");
-            //numberOfPeople.Items.Add("4");
-            //numberOfPeople.Items.Add("5");
-            //numberOfPeople.Text = "Number of people ...";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -65,7 +77,21 @@ namespace CinemaProject.Model.Forms
          
         private void numberOfPeople_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            person1.Visible = false;
+            person2.Visible = false;
+            person3.Visible = false;
+            person4.Visible = false;
+            person5.Visible = false;
+            person11.Visible = false;
+            person22.Visible = false;
+            person33.Visible = false;
+            person44.Visible = false;
+            person55.Visible = false;
+            seat1.Visible = false;
+            seat2.Visible = false;
+            seat3.Visible = false;
+            seat4.Visible = false;
+            seat5.Visible = false;
 
             var reservationQuantity = int.Parse(numberOfPeople.Text);
             var counter = 0;
@@ -74,19 +100,31 @@ namespace CinemaProject.Model.Forms
                 switch (counter)
                 {
                     case 1:
+                        selectRow.Visible = true;
+                        SelectSeatNr.Visible = true;
                         person1.Visible = true;
+                        person11.Visible = true;
+                        seat1.Visible = true;
                         break;
                     case 2:
                         person2.Visible = true;
+                        person22.Visible = true;
+                        seat2.Visible = true;
                         break;
                     case 3:
-                        person2.Visible = true;
+                        person3.Visible = true;
+                        person33.Visible = true;
+                        seat3.Visible = true;
                         break;
                     case 4:
-                        person2.Visible = true;
+                        person4.Visible = true;
+                        person44.Visible = true;
+                        seat4.Visible = true;
                         break;
                     case 5:
-                        person2.Visible = true;
+                        person5.Visible = true;
+                        person55.Visible = true;
+                        seat5.Visible = true;
                         break;
                     default:
                         break;
@@ -96,6 +134,11 @@ namespace CinemaProject.Model.Forms
         }
 
         private void comboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
