@@ -37,20 +37,20 @@ namespace CinemaProject.Model.Repository
 
              var json = JsonConvert.SerializeObject(allChairs);
 
-            var pathToJsonFile = GetPathToJson();
-            File.WriteAllText(pathToJsonFile, json);
+             var pathToJsonFile = GetPathToJson();
+             File.WriteAllText(pathToJsonFile, json);
         }
 
-        public void deleteChair(int Id_Chair) {
+        public void deleteChair(int Id_Chair,int price) {
             var allChairs = Getall();
-            var oldId = allChairs.Where(c => c.Id_Chair != Id_Chair);
+            var chairDel = new ChairView(Id_Chair,price);
+            allChairs.Remove(chairDel);
 
-            if (oldId != null) 
-                { var json = JsonConvert.SerializeObject(allChairs);
-                  var pathToJsonFile = GetPathToJson(); 
-                  File.WriteAllText(pathToJsonFile, json);
-                }
-            
+            var json = JsonConvert.SerializeObject(allChairs);
+
+            var pathToJsonFile = GetPathToJson();
+            File.WriteAllText(pathToJsonFile, json);
+
         }
         public string GetPathToJson()
         {
