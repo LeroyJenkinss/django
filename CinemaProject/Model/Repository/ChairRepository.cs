@@ -30,7 +30,7 @@ namespace CinemaProject.Model.Repository
 
         public void AddChair(double price) {
             var allChairs = Getall();
-            var newId = allChairs.Max(x => x.Id_Chair);
+            var newId = allChairs.Max(x => x.Id_TheaterRoom);
             var chairToAdd = new ChairView(newId, price);
             allChairs.Append(chairToAdd);
 
@@ -41,9 +41,9 @@ namespace CinemaProject.Model.Repository
              File.WriteAllText(pathToJsonFile, json);
         }
 
-        public void deleteChair(int Id_Chair,int price) {
+        public void deleteChair(int Id_TheaterRoom, double price) {
             var allChairs = Getall();
-            var chairDel = new ChairView(Id_Chair,price);
+            var chairDel = new ChairView(Id_TheaterRoom, price);
             allChairs.Remove(chairDel);
 
             var json = JsonConvert.SerializeObject(allChairs);
