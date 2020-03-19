@@ -7,6 +7,6 @@
     "\\CinemaProject\\Model\\Repository",
     "\\CinemaProject\\Objects"
   ],
-  "SelectedNode": "\\CinemaProject\\Objects\\ChairView.cs",
+  "SelectedNode": "\\CinemaProject\\Model\\Repository\\ChairRepository.cs",
   "PreviewInSolutionExplorer": false
 }

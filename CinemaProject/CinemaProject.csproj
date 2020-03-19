@@ -70,8 +70,10 @@
     <Compile Include="Model\Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Repository\ChairRepository.cs" />
     <Compile Include="Model\Repository\ShowTimeRepository.cs" />
     <Compile Include="Model\Repository\MoviesRepository.cs" />
+    <Compile Include="Objects\ChairView.cs" />
     <Compile Include="Objects\ShowtimeView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

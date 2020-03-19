@@ -52,6 +52,7 @@ namespace CinemaProject.Model.Repository
             File.WriteAllText(pathToJsonFile, json);
 
         }
+
         public string GetPathToJson()
         {
             string workingDirectory = Environment.CurrentDirectory;
