@@ -2,11 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\CinemaProject",
-    "\\CinemaProject\\Data",
-    "\\CinemaProject\\Model",
-    "\\CinemaProject\\Model\\Repository",
-    "\\CinemaProject\\Objects"
+    "\\CinemaProject\\Data"
   ],
-  "SelectedNode": "\\CinemaProject\\Model\\Repository\\ChairRepository.cs",
   "PreviewInSolutionExplorer": false
 }

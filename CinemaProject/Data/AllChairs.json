@@ -1,0 +1,30 @@
+[
+  {
+    "id_Chair": "1a",
+    "price": "20.00"
+  },
+  {
+    "id_Chair": "1b",
+    "price": "20.00"
+  },
+  {
+    "id_Chair": "1c",
+    "price": "20.00"
+  },
+  {
+    "id_Chair": "2a",
+    "price": "24.50"
+  },
+  {
+    "id_Chair": "2b",
+    "price": "24.50"
+  }
+  {
+    "id_Chair": "2c",
+    "price": "24.50"
+  }
+  {
+    "id_Chair": "2d",
+    "price": "24.50"
+  }
+]
