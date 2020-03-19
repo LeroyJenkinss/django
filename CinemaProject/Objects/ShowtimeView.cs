@@ -8,17 +8,17 @@ namespace CinemaProject.View
 {
     public class ShowTimeView
     {
-        public int Id_Movietime;
-        public string Name;
-        public int Showtime;
+        public int Id_MovieShowTime;
+        public int Id_Movie;
+        public DateTime Showtime;
 
         public ShowTimeView(
-            int id_showtime,
-            string name,
+            int id_movieshowtime,
+            int id_movie,
             int showtime)
         {
-            Id_Movietime = id_showtime;
-            Name = name;
+            Id_MovieShowTime = id_movieshowtime;
+            Id_Movie = id_movie;
             Showtime = showtime;
         }
     }

@@ -1,4 +1,4 @@
-﻿using CinemaProject.View;
+using CinemaProject.View;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,45 +7,44 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using Org.BouncyCastle.Utilities;
 
 namespace CinemaProject.Model.Repository
 {
-    public class ShowTimeRepository 
+    public class TheaterRepository
     {
-        public List<ShowTimeView> GetAll()
+
+        public List<TheaterView> GetAll()
         {
+
             var pathToJsonFile = GetPathToJson();
 
-            List<ShowTimeView> items;
+            List<TheaterView> items;
 
             using (StreamReader r = new StreamReader(pathToJsonFile))
             {
                 string json = r.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<ShowTimeView>>(json);
+                items = JsonConvert.DeserializeObject<List<TheaterView>>(json);
             }
 
             return items;
         }
 
-        public List<ShowTimeView> allShowTimesForMovie(int id_Movie)
-        {  
-            var allShowTimes = GetAll();
+        public List<TheaterView> GetAllChairForTheaterRoom(int theaterRoomId)
+        {
 
-            var allShowTimesForMovie = allShowTimes.Where(x => x.Id_Movie == id_Movie).ToList();
-
-            return allShowTimesForMovie;
         }
 
-      
         public string GetPathToJson()
         {
             string workingDirectory = Environment.CurrentDirectory;
-            var pathToJsonFile = Directory.GetParent(workingDirectory).Parent.FullName + @"\Data\AllShowtimes.json";
+            var pathToJsonFile = Directory.GetParent(workingDirectory).Parent.FullName + @"\Data\AllTheaterRooms.json";
 
             return pathToJsonFile;
         }
+
     }
+
+
 
 
 

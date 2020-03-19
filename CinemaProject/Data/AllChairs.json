@@ -1,11 +1,18 @@
 [
   {
-    "id_Chair": "1a",
-    "price": "20.00"
+    "id_TheaterRoom": 1,
+    "price": "20.00",
+    "chairs": [
+      "A1",
+      "A2"
+    ]
   },
   {
-    "id_Chair": "1b",
-    "price": "20.00"
+    "id_TheaterRoom": 1,
+    "price": "30.00",
+    "chairs": [
+      "B1"
+    ]
   },
   {
     "id_Chair": "1c",

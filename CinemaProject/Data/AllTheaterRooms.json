@@ -1,9 +1,12 @@
 [         
             {
-                "id" : 1,
-                "name" : "Sonic",
-                "releaseDate" : "2020-02-13",
-                "genre" : "Anime"
+              "theaterRoom_id" : 1,
+              "allChairs": [
+                "A1",
+                "A2",
+                "B1",
+                "B2"
+              ]
             }, 
             {                
                 "id" : 2,
