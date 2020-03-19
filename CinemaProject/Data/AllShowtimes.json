@@ -1,0 +1,17 @@
+[
+  {
+    "id_movietime": 1,
+    "name": "Sonic",
+    "showtime": "13:00"
+  },
+  {
+    "id_movietime": 2,
+    "name": "Birds Of Prey",
+    "showtime": "10:00"
+  },
+  {
+    "id_movietime": 3,
+    "name": "SuperMan",
+    "showtime": "11:30"
+  }
+]
