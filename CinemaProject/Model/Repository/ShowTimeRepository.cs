@@ -32,12 +32,19 @@ namespace CinemaProject.Model.Repository
         {  
             var allShowTimes = GetAll();
 
-            var allShowTimesForMovie = allShowTimes.Where(x => x.Id_Movie == id_Movie).ToList();
 
-            return allShowTimesForMovie;
+            return allShowTimes.Where(x => x.Id_Movie == id_Movie).ToList();
         }
 
-      
+        public List<ShowTimeView> oneShowTimesForMovie(int id_Movie,int id_movieShowTime)
+        {
+            var allShowTimes = GetAll();
+
+
+            return allShowTimes.Where(x => x.Id_Movie == id_Movie && x.Id_MovieShowTime == id_movieShowTime).ToList();
+        }
+
+
         public string GetPathToJson()
         {
             string workingDirectory = Environment.CurrentDirectory;

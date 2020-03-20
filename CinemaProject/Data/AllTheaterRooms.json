@@ -4,20 +4,41 @@
               "allChairs": [
                 "A1",
                 "A2",
+                "A3",
+                "A4",
+                "A5",
                 "B1",
-                "B2"
+                "B2",
+                "B3",
+                "B4"
               ]
             }, 
             {                
-                "theaterRoom_id" : 2,
-                "name" : "Birds Of Prey",
-                "releaseDate" : "2020-02-06",
-                "genre" : "Action"
+              "theaterRoom_id" : 2,
+              "allChairs": [
+                "A1",
+                "A2",
+                "A3",
+                "A4",
+                "A5",
+                "B1",
+                "B2",
+                "B3",
+                "B4"
+              ]
             },
-            {                
-                "id" : 3,
-                "name" : "SuperMan",
-                "releaseDate" : "2018-02-06",
-                "genre": "Action"
+            {
+              "theaterRoom_id": 3,
+              "allChairs": [
+                "A1",
+                "A2",
+                "A3",
+                "A4",
+                "A5",
+                "B1",
+                "B2",
+                "B3",
+                "B4"
+              ]
             }    
     ]

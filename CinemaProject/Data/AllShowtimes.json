@@ -6,8 +6,7 @@
   },
   {
     "id_movietime": 2,
-    "id_movie": 2,
-    "name": "Birds Of Prey",
+    "id_movie": 1,
     "datetime": "2020-04-19 13:09:34.467"
   },
   {
@@ -17,7 +16,17 @@
   },
   {
     "id_movieShowTime": 4,
-    "id_movie": 1,
+    "id_movie": 2,
+    "datetime": "2020-03-19 13:09:34.467"
+  },
+  {
+    "id_movietime": 3,
+    "id_movie": 3,
+    "showtime": "2020-06-19 13:09:34.467"
+  },
+  {
+    "id_movieShowTime": 4,
+    "id_movie": 3,
     "datetime": "2020-03-19 13:09:34.467"
   }
 ]
