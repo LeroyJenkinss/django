@@ -41,7 +41,7 @@ namespace CinemaProject.Model.Repository
              File.WriteAllText(pathToJsonFile, json);
         }
 
-        public void deleteChair(double price, string[] chairs, int id_TheaterRoom,string chairName) {
+        public void reserveChair(double price, string[] chairs, int id_TheaterRoom,string chairName) {
             var allObjectsInArray = Getall();
             var singleObject= allObjectsInArray.Find(x => x.Id_TheaterRoom == id_TheaterRoom && x.Price == price);
 
@@ -55,6 +55,27 @@ namespace CinemaProject.Model.Repository
             var pathToJsonFile = GetPathToJson();
             File.WriteAllText(pathToJsonFile, json);
 
+        }
+
+        public List<string> allChairs(int id_TheaterRoom) {
+            var allObjectsInArray = Getall();
+            var singleObject = allObjectsInArray.Find(x => x.Id_TheaterRoom == id_TheaterRoom);
+
+            var allChairInRoom = singleObject.Chairs.ToList();
+
+
+            var json = JsonConvert.SerializeObject(allChairInRoom);
+
+            var pathToJsonFile = GetPathToJson();
+            File.WriteAllText(pathToJsonFile, json);
+
+            return allChairInRoom;
+            
+
+
+            
+
+           
         }
 
         public string GetPathToJson()

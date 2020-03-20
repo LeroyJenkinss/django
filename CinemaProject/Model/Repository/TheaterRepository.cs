@@ -32,6 +32,7 @@ namespace CinemaProject.Model.Repository
         public List<TheaterView> GetAllChairForTheaterRoom(int theaterRoomId)
         {
 
+
         }
 
         public string GetPathToJson()
