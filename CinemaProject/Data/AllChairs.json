@@ -1,6 +1,5 @@
 [
   {
-    
     "id_TheaterRoom": 1,
     "price": "20.00",
     "chairs": [
@@ -20,6 +19,28 @@
       "B3",
       "B4"
 
+    ]
+  },
+  {
+    "id_TheaterRoom": 2,
+    "price": "30.00",
+    "chairs": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+
+    ]
+  },
+  {
+    "id_TheaterRoom": 2,
+    "price": "20.00",
+    "chairs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5"
     ]
   }
 ]

@@ -10,11 +10,9 @@ using Newtonsoft.Json;
 
 namespace CinemaProject.Model.Repository
 {
-    public class TheaterRepository
-    {
+    public class TheatherRepository {
 
-        public List<TheaterView> GetAll()
-        {
+        public List<TheaterView> Getall() {
 
             var pathToJsonFile = GetPathToJson();
 
@@ -27,11 +25,15 @@ namespace CinemaProject.Model.Repository
             }
 
             return items;
+
         }
 
-        public List<TheaterView> GetAllChairForTheaterRoom(int theaterRoomId)
-        {
+        public List<string> allChiarsInTheatherRoom(int id_TheaterRoom) {
+            var allObjects = Getall();
+            var singleObject = allObjects.Find(x => x.Id_TheaterRoom == id_TheaterRoom);
 
+            var allChairsinTheaterRoom = singleObject.AllChairs.ToList();
+            return allChairsinTheaterRoom;
 
         }
 
@@ -46,7 +48,6 @@ namespace CinemaProject.Model.Repository
     }
 
 
-
-
-
 }
+
+

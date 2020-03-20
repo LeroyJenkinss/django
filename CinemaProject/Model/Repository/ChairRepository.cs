@@ -28,18 +28,6 @@ namespace CinemaProject.Model.Repository
 
         }
 
-        public void AddChair(double price) {
-            var allChairs = Getall();
-            var newId = allChairs.Max(x => x.Id_TheaterRoom);
-            var chairToAdd = new ChairView(newId, price);
-            allChairs.Append(chairToAdd);
-
-
-             var json = JsonConvert.SerializeObject(allChairs);
-
-             var pathToJsonFile = GetPathToJson();
-             File.WriteAllText(pathToJsonFile, json);
-        }
 
         public void reserveChair(double price, string[] chairs, int id_TheaterRoom,string chairName) {
             var allObjectsInArray = Getall();

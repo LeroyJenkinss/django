@@ -8,13 +8,16 @@ namespace CinemaProject.View
 {
     public class TheaterView
     {
-        public int Id_Chair;
+        public int Id_TheaterRoom;
         public string[] AllChairs;
-        
 
-        public TheaterView(int id_theaterroom, string[] allchairs){
-            Id_TheaterRoom = id_theaterroom;
-            AllChairs = allchairs;
+
+
+        public TheaterView(int id_TheaterRoom, string[] allChairs)
+        {
+            Id_TheaterRoom = id_TheaterRoom;
+            AllChairs = allChairs;
+
         }
     }
 }
