@@ -2,7 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\CinemaProject",
-    "\\CinemaProject\\Data"
+    "\\CinemaProject\\Data",
+    "\\CinemaProject\\Forms",
+    "\\CinemaProject\\Model",
+    "\\CinemaProject\\Model\\Repository",
+    "\\CinemaProject\\Objects"
   ],
+  "SelectedNode": "\\CinemaProject\\Model\\Repository\\ShowTimeRepository.cs",
   "PreviewInSolutionExplorer": false
 }
