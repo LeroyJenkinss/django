@@ -1,20 +1,44 @@
-[         
-            {
-                "id" : 1,
-                "name" : "Sonic",
-                "releaseDate" : "2020-02-13",
-                "genre" : "Anime"
-            }, 
-            {                
-                "id" : 2,
-                "name" : "Birds Of Prey",
-                "releaseDate" : "2020-02-06",
-                "genre" : "Action"
-            },
-            {                
-                "id" : 3,
-                "name" : "SuperMan",
-                "releaseDate" : "2018-02-06",
-                "genre": "Action"
-            }    
+[
+  {
+    "id_theaterRoom": 1, //is gelijk aan de RoomId
+    "allChairs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "B1",
+      "B2",
+      "B3",
+      "B4"
     ]
+  },
+  {
+    "id_theaterRoom": 2,
+    "allChairs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ]
+  },
+  {
+    "id_theaterRoom": 3,
+    "allChairs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ]
+  }    
+]
