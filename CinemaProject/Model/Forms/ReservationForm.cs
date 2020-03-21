@@ -15,24 +15,31 @@ namespace CinemaProject.Model.Forms
     public partial class ReservationForm : Form
     {
         private readonly ShowTimeRepository _showTimeRepository;
+        private readonly TheaterRoomsRepository _theaterRoomsRepository;
+        private readonly int id_MovieShowtime;
 
-        public ReservationForm()
+        public ReservationForm(int id_movieShowTime)
         {
             InitializeComponent();
+            id_MovieShowtime = id_movieShowTime;
             _showTimeRepository = new ShowTimeRepository();
+            _theaterRoomsRepository = new TheaterRoomsRepository();
         }
 
         private void ReservationForm_Load(object sender, EventArgs e)
         {
-            var allShowtimes = _showTimeRepository.GetAll();
+            var showtime = _showTimeRepository.GetShowTime(id_MovieShowtime);
+            var theaterRoom = _theaterRoomsRepository.GetTheaterRoom(1);
+
+
             selectRow.Visible = false;
             SelectSeatNr.Visible = false;
-            person1.Visible = false;
+            rowForPerson1.Visible = false;
             person2.Visible = false;
             person3.Visible = false;
             person4.Visible = false;
             person5.Visible = false;
-            person11.Visible = false;
+            seatForPerson1.Visible = false;
             person22.Visible = false;
             person33.Visible = false;
             person44.Visible = false;
@@ -43,13 +50,16 @@ namespace CinemaProject.Model.Forms
             seat4.Visible = false;
             seat5.Visible = false;
 
+            var chairsNotTaken = theaterRoom.AllChairs.Where(x => !showtime.TakenChairs.Contains(x));
 
-            foreach (ShowTimeView i in allShowtimes)
+            foreach (var chair in chairsNotTaken)
             {
-                
-                
+                //rowForPerson1.Items.Add(chair[0]);
+                //seatForPerson1.Items.Add(chair[1]);
+                rowForPerson1.Items.Add(chair);
 
             }
+
             var maxPeople = new string[] { "1", "2", "3", "4", "5" }; 
             foreach (var item in maxPeople) 
             {
@@ -77,12 +87,12 @@ namespace CinemaProject.Model.Forms
          
         private void numberOfPeople_SelectedIndexChanged(object sender, EventArgs e)
         {
-            person1.Visible = false;
+            rowForPerson1.Visible = false;
             person2.Visible = false;
             person3.Visible = false;
             person4.Visible = false;
             person5.Visible = false;
-            person11.Visible = false;
+            seatForPerson1.Visible = false;
             person22.Visible = false;
             person33.Visible = false;
             person44.Visible = false;
@@ -102,8 +112,8 @@ namespace CinemaProject.Model.Forms
                     case 1:
                         selectRow.Visible = true;
                         SelectSeatNr.Visible = true;
-                        person1.Visible = true;
-                        person11.Visible = true;
+                        rowForPerson1.Visible = true;
+                        seatForPerson1.Visible = true;
                         seat1.Visible = true;
                         break;
                     case 2:
@@ -141,6 +151,19 @@ namespace CinemaProject.Model.Forms
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void submitReservation_Click(object sender, EventArgs e)
+        {
+            var seatnumber = rowForPerson1.SelectedItem;
+            //var newTakenChairs = rowForPerson1.Items.Cast<Object>()
+            //                                        .Select(item => item.ToString()).ToList();
+
+            var newTakenChairs = new List<string>();
+
+            newTakenChairs.Add(seatnumber.ToString());
+
+            _showTimeRepository.AddNewTakenChairs(newTakenChairs, id_MovieShowtime);
         }
     }
 }

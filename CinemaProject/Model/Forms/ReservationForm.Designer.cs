@@ -33,7 +33,7 @@
             this.numberOfPeople = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.seat1 = new System.Windows.Forms.Label();
-            this.person1 = new System.Windows.Forms.ComboBox();
+            this.rowForPerson1 = new System.Windows.Forms.ComboBox();
             this.person2 = new System.Windows.Forms.ComboBox();
             this.seat2 = new System.Windows.Forms.Label();
             this.person3 = new System.Windows.Forms.ComboBox();
@@ -46,9 +46,10 @@
             this.person44 = new System.Windows.Forms.ComboBox();
             this.person33 = new System.Windows.Forms.ComboBox();
             this.person22 = new System.Windows.Forms.ComboBox();
-            this.person11 = new System.Windows.Forms.ComboBox();
+            this.seatForPerson1 = new System.Windows.Forms.ComboBox();
             this.selectRow = new System.Windows.Forms.Label();
             this.SelectSeatNr = new System.Windows.Forms.Label();
+            this.submitReservation = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -98,14 +99,14 @@
             this.seat1.TabIndex = 4;
             this.seat1.Text = "Seat 1";
             // 
-            // person1
+            // rowForPerson1
             // 
-            this.person1.FormattingEnabled = true;
-            this.person1.Location = new System.Drawing.Point(228, 142);
-            this.person1.Name = "person1";
-            this.person1.Size = new System.Drawing.Size(121, 21);
-            this.person1.TabIndex = 5;
-            this.person1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.rowForPerson1.FormattingEnabled = true;
+            this.rowForPerson1.Location = new System.Drawing.Point(228, 142);
+            this.rowForPerson1.Name = "rowForPerson1";
+            this.rowForPerson1.Size = new System.Drawing.Size(121, 21);
+            this.rowForPerson1.TabIndex = 5;
+            this.rowForPerson1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // person2
             // 
@@ -208,13 +209,13 @@
             this.person22.Size = new System.Drawing.Size(121, 21);
             this.person22.TabIndex = 16;
             // 
-            // person11
+            // seatForPerson1
             // 
-            this.person11.FormattingEnabled = true;
-            this.person11.Location = new System.Drawing.Point(355, 142);
-            this.person11.Name = "person11";
-            this.person11.Size = new System.Drawing.Size(121, 21);
-            this.person11.TabIndex = 15;
+            this.seatForPerson1.FormattingEnabled = true;
+            this.seatForPerson1.Location = new System.Drawing.Point(355, 142);
+            this.seatForPerson1.Name = "seatForPerson1";
+            this.seatForPerson1.Size = new System.Drawing.Size(121, 21);
+            this.seatForPerson1.TabIndex = 15;
             // 
             // selectRow
             // 
@@ -235,18 +236,29 @@
             this.SelectSeatNr.TabIndex = 21;
             this.SelectSeatNr.Text = "Select seat number";
             // 
+            // submitReservation
+            // 
+            this.submitReservation.Location = new System.Drawing.Point(228, 323);
+            this.submitReservation.Name = "submitReservation";
+            this.submitReservation.Size = new System.Drawing.Size(248, 40);
+            this.submitReservation.TabIndex = 22;
+            this.submitReservation.Text = "Make Reservation";
+            this.submitReservation.UseVisualStyleBackColor = true;
+            this.submitReservation.Click += new System.EventHandler(this.submitReservation_Click);
+            // 
             // ReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.submitReservation);
             this.Controls.Add(this.SelectSeatNr);
             this.Controls.Add(this.selectRow);
             this.Controls.Add(this.person55);
             this.Controls.Add(this.person44);
             this.Controls.Add(this.person33);
             this.Controls.Add(this.person22);
-            this.Controls.Add(this.person11);
+            this.Controls.Add(this.seatForPerson1);
             this.Controls.Add(this.person5);
             this.Controls.Add(this.seat5);
             this.Controls.Add(this.person4);
@@ -255,7 +267,7 @@
             this.Controls.Add(this.seat3);
             this.Controls.Add(this.person2);
             this.Controls.Add(this.seat2);
-            this.Controls.Add(this.person1);
+            this.Controls.Add(this.rowForPerson1);
             this.Controls.Add(this.seat1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numberOfPeople);
@@ -276,7 +288,7 @@
         private System.Windows.Forms.ComboBox numberOfPeople;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label seat1;
-        private System.Windows.Forms.ComboBox person1;
+        private System.Windows.Forms.ComboBox rowForPerson1;
         private System.Windows.Forms.ComboBox person2;
         private System.Windows.Forms.Label seat2;
         private System.Windows.Forms.ComboBox person3;
@@ -289,8 +301,9 @@
         private System.Windows.Forms.ComboBox person44;
         private System.Windows.Forms.ComboBox person33;
         private System.Windows.Forms.ComboBox person22;
-        private System.Windows.Forms.ComboBox person11;
+        private System.Windows.Forms.ComboBox seatForPerson1;
         private System.Windows.Forms.Label selectRow;
         private System.Windows.Forms.Label SelectSeatNr;
+        private System.Windows.Forms.Button submitReservation;
     }
 }

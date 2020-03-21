@@ -42,7 +42,7 @@ namespace CinemaProject
 
         private void movieList_DoubleClick(object sender, EventArgs e)
         {
-            var reservationForm = new ReservationForm();
+            var reservationForm = new ReservationForm(1);
             reservationForm.Show();
         }
     }
