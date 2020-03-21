@@ -82,6 +82,7 @@
     <Compile Include="Model\Repository\MoviesRepository.cs" />
     <Compile Include="Model\Repository\ShowTimeRepository.cs" />
     <Compile Include="Model\Repository\TheaterRoomsRepository.cs" />
+    <Compile Include="Model\Services\ReservationFormService.cs" />
     <Compile Include="Objects\TheaterRoomView.cs" />
     <Compile Include="Objects\MovieView.cs" />
     <Compile Include="Objects\ShowtimeView.cs" />
@@ -118,8 +119,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Model\Services\" />
-    <Folder Include="Model\Repository\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

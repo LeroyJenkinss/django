@@ -32,20 +32,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.numberOfPeople = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.seat1 = new System.Windows.Forms.Label();
+            this.labelSeat1 = new System.Windows.Forms.Label();
             this.rowForPerson1 = new System.Windows.Forms.ComboBox();
-            this.person2 = new System.Windows.Forms.ComboBox();
-            this.seat2 = new System.Windows.Forms.Label();
-            this.person3 = new System.Windows.Forms.ComboBox();
-            this.seat3 = new System.Windows.Forms.Label();
-            this.person4 = new System.Windows.Forms.ComboBox();
-            this.seat4 = new System.Windows.Forms.Label();
-            this.person5 = new System.Windows.Forms.ComboBox();
-            this.seat5 = new System.Windows.Forms.Label();
-            this.person55 = new System.Windows.Forms.ComboBox();
-            this.person44 = new System.Windows.Forms.ComboBox();
-            this.person33 = new System.Windows.Forms.ComboBox();
-            this.person22 = new System.Windows.Forms.ComboBox();
+            this.rowForPerson2 = new System.Windows.Forms.ComboBox();
+            this.labelSeat2 = new System.Windows.Forms.Label();
+            this.rowForPerson3 = new System.Windows.Forms.ComboBox();
+            this.labelSeat3 = new System.Windows.Forms.Label();
+            this.rowForPerson4 = new System.Windows.Forms.ComboBox();
+            this.labelSeat4 = new System.Windows.Forms.Label();
+            this.rowForPerson5 = new System.Windows.Forms.ComboBox();
+            this.labelSeat5 = new System.Windows.Forms.Label();
+            this.seatForPerson5 = new System.Windows.Forms.ComboBox();
+            this.seatForPerson4 = new System.Windows.Forms.ComboBox();
+            this.seatForPerson3 = new System.Windows.Forms.ComboBox();
+            this.seatForPerson2 = new System.Windows.Forms.ComboBox();
             this.seatForPerson1 = new System.Windows.Forms.ComboBox();
             this.selectRow = new System.Windows.Forms.Label();
             this.SelectSeatNr = new System.Windows.Forms.Label();
@@ -60,7 +60,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -88,16 +87,15 @@
             this.label3.Size = new System.Drawing.Size(201, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Number of guests to make an reservation";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // seat1
+            // labelSeat1
             // 
-            this.seat1.AutoSize = true;
-            this.seat1.Location = new System.Drawing.Point(12, 145);
-            this.seat1.Name = "seat1";
-            this.seat1.Size = new System.Drawing.Size(38, 13);
-            this.seat1.TabIndex = 4;
-            this.seat1.Text = "Seat 1";
+            this.labelSeat1.AutoSize = true;
+            this.labelSeat1.Location = new System.Drawing.Point(12, 145);
+            this.labelSeat1.Name = "labelSeat1";
+            this.labelSeat1.Size = new System.Drawing.Size(38, 13);
+            this.labelSeat1.TabIndex = 4;
+            this.labelSeat1.Text = "Seat 1";
             // 
             // rowForPerson1
             // 
@@ -106,108 +104,110 @@
             this.rowForPerson1.Name = "rowForPerson1";
             this.rowForPerson1.Size = new System.Drawing.Size(121, 21);
             this.rowForPerson1.TabIndex = 5;
-            this.rowForPerson1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+
             // 
-            // person2
+            // rowForPerson2
             // 
-            this.person2.FormattingEnabled = true;
-            this.person2.Location = new System.Drawing.Point(228, 178);
-            this.person2.Name = "person2";
-            this.person2.Size = new System.Drawing.Size(121, 21);
-            this.person2.TabIndex = 8;
-            this.person2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged_1);
+            this.rowForPerson2.FormattingEnabled = true;
+            this.rowForPerson2.Location = new System.Drawing.Point(228, 178);
+            this.rowForPerson2.Name = "rowForPerson2";
+            this.rowForPerson2.Size = new System.Drawing.Size(121, 21);
+            this.rowForPerson2.TabIndex = 8;
             // 
-            // seat2
+            // labelSeat2
             // 
-            this.seat2.AutoSize = true;
-            this.seat2.Location = new System.Drawing.Point(12, 181);
-            this.seat2.Name = "seat2";
-            this.seat2.Size = new System.Drawing.Size(38, 13);
-            this.seat2.TabIndex = 7;
-            this.seat2.Text = "Seat 2";
+            this.labelSeat2.AutoSize = true;
+            this.labelSeat2.Location = new System.Drawing.Point(12, 181);
+            this.labelSeat2.Name = "labelSeat2";
+            this.labelSeat2.Size = new System.Drawing.Size(38, 13);
+            this.labelSeat2.TabIndex = 7;
+            this.labelSeat2.Text = "Seat 2";
             // 
-            // person3
+            // rowForPerson3
             // 
-            this.person3.FormattingEnabled = true;
-            this.person3.Location = new System.Drawing.Point(228, 214);
-            this.person3.Name = "person3";
-            this.person3.Size = new System.Drawing.Size(121, 21);
-            this.person3.TabIndex = 10;
+            this.rowForPerson3.FormattingEnabled = true;
+            this.rowForPerson3.Location = new System.Drawing.Point(228, 214);
+            this.rowForPerson3.Name = "rowForPerson3";
+            this.rowForPerson3.Size = new System.Drawing.Size(121, 21);
+            this.rowForPerson3.TabIndex = 10;
             // 
-            // seat3
+            // labelSeat3
             // 
-            this.seat3.AutoSize = true;
-            this.seat3.Location = new System.Drawing.Point(12, 217);
-            this.seat3.Name = "seat3";
-            this.seat3.Size = new System.Drawing.Size(38, 13);
-            this.seat3.TabIndex = 9;
-            this.seat3.Text = "Seat 3";
+            this.labelSeat3.AutoSize = true;
+            this.labelSeat3.Location = new System.Drawing.Point(12, 217);
+            this.labelSeat3.Name = "labelSeat3";
+            this.labelSeat3.Size = new System.Drawing.Size(38, 13);
+            this.labelSeat3.TabIndex = 9;
+            this.labelSeat3.Text = "Seat 3";
             // 
-            // person4
+            // rowForPerson4
             // 
-            this.person4.FormattingEnabled = true;
-            this.person4.Location = new System.Drawing.Point(228, 250);
-            this.person4.Name = "person4";
-            this.person4.Size = new System.Drawing.Size(121, 21);
-            this.person4.TabIndex = 12;
+            this.rowForPerson4.FormattingEnabled = true;
+            this.rowForPerson4.Location = new System.Drawing.Point(228, 250);
+            this.rowForPerson4.Name = "rowForPerson4";
+            this.rowForPerson4.Size = new System.Drawing.Size(121, 21);
+            this.rowForPerson4.TabIndex = 12;
             // 
-            // seat4
+            // labelSeat4
             // 
-            this.seat4.AutoSize = true;
-            this.seat4.Location = new System.Drawing.Point(12, 253);
-            this.seat4.Name = "seat4";
-            this.seat4.Size = new System.Drawing.Size(38, 13);
-            this.seat4.TabIndex = 11;
-            this.seat4.Text = "Seat 4";
+            this.labelSeat4.AutoSize = true;
+            this.labelSeat4.Location = new System.Drawing.Point(12, 253);
+            this.labelSeat4.Name = "labelSeat4";
+            this.labelSeat4.Size = new System.Drawing.Size(38, 13);
+            this.labelSeat4.TabIndex = 11;
+            this.labelSeat4.Text = "Seat 4";
             // 
-            // person5
+            // rowForPerson5
             // 
-            this.person5.FormattingEnabled = true;
-            this.person5.Location = new System.Drawing.Point(228, 286);
-            this.person5.Name = "person5";
-            this.person5.Size = new System.Drawing.Size(121, 21);
-            this.person5.TabIndex = 14;
+            this.rowForPerson5.FormattingEnabled = true;
+            this.rowForPerson5.Location = new System.Drawing.Point(228, 286);
+            this.rowForPerson5.Name = "rowForPerson5";
+            this.rowForPerson5.Size = new System.Drawing.Size(121, 21);
+            this.rowForPerson5.TabIndex = 14;
             // 
-            // seat5
+            // labelSeat5
             // 
-            this.seat5.AutoSize = true;
-            this.seat5.Location = new System.Drawing.Point(12, 289);
-            this.seat5.Name = "seat5";
-            this.seat5.Size = new System.Drawing.Size(38, 13);
-            this.seat5.TabIndex = 13;
-            this.seat5.Text = "Seat 5";
+            this.labelSeat5.AutoSize = true;
+            this.labelSeat5.Location = new System.Drawing.Point(12, 289);
+            this.labelSeat5.Name = "labelSeat5";
+            this.labelSeat5.Size = new System.Drawing.Size(38, 13);
+            this.labelSeat5.TabIndex = 13;
+            this.labelSeat5.Text = "Seat 5";
             // 
-            // person55
+            // seatForPerson5
             // 
-            this.person55.FormattingEnabled = true;
-            this.person55.Location = new System.Drawing.Point(355, 286);
-            this.person55.Name = "person55";
-            this.person55.Size = new System.Drawing.Size(121, 21);
-            this.person55.TabIndex = 19;
+            this.seatForPerson5.FormattingEnabled = true;
+            this.seatForPerson5.Location = new System.Drawing.Point(355, 286);
+            this.seatForPerson5.Name = "seatForPerson5";
+            this.seatForPerson5.Size = new System.Drawing.Size(121, 21);
+            this.seatForPerson5.TabIndex = 19;
             // 
-            // person44
+            // seatForPerson4
             // 
-            this.person44.FormattingEnabled = true;
-            this.person44.Location = new System.Drawing.Point(355, 250);
-            this.person44.Name = "person44";
-            this.person44.Size = new System.Drawing.Size(121, 21);
-            this.person44.TabIndex = 18;
+            this.seatForPerson4.FormattingEnabled = true;
+            this.seatForPerson4.Location = new System.Drawing.Point(355, 250);
+            this.seatForPerson4.Name = "seatForPerson4";
+            this.seatForPerson4.Size = new System.Drawing.Size(121, 21);
+            this.seatForPerson4.TabIndex = 18;
+
             // 
-            // person33
+            // seatForPerson3
             // 
-            this.person33.FormattingEnabled = true;
-            this.person33.Location = new System.Drawing.Point(355, 214);
-            this.person33.Name = "person33";
-            this.person33.Size = new System.Drawing.Size(121, 21);
-            this.person33.TabIndex = 17;
+            this.seatForPerson3.FormattingEnabled = true;
+            this.seatForPerson3.Location = new System.Drawing.Point(355, 214);
+            this.seatForPerson3.Name = "seatForPerson3";
+            this.seatForPerson3.Size = new System.Drawing.Size(121, 21);
+            this.seatForPerson3.TabIndex = 17;
+
             // 
-            // person22
+            // seatForPerson2
             // 
-            this.person22.FormattingEnabled = true;
-            this.person22.Location = new System.Drawing.Point(355, 178);
-            this.person22.Name = "person22";
-            this.person22.Size = new System.Drawing.Size(121, 21);
-            this.person22.TabIndex = 16;
+            this.seatForPerson2.FormattingEnabled = true;
+            this.seatForPerson2.Location = new System.Drawing.Point(355, 178);
+            this.seatForPerson2.Name = "seatForPerson2";
+            this.seatForPerson2.Size = new System.Drawing.Size(121, 21);
+            this.seatForPerson2.TabIndex = 16;
+
             // 
             // seatForPerson1
             // 
@@ -225,7 +225,6 @@
             this.selectRow.Size = new System.Drawing.Size(62, 13);
             this.selectRow.TabIndex = 20;
             this.selectRow.Text = "Select Row";
-            this.selectRow.Click += new System.EventHandler(this.label4_Click);
             // 
             // SelectSeatNr
             // 
@@ -254,21 +253,21 @@
             this.Controls.Add(this.submitReservation);
             this.Controls.Add(this.SelectSeatNr);
             this.Controls.Add(this.selectRow);
-            this.Controls.Add(this.person55);
-            this.Controls.Add(this.person44);
-            this.Controls.Add(this.person33);
-            this.Controls.Add(this.person22);
+            this.Controls.Add(this.seatForPerson5);
+            this.Controls.Add(this.seatForPerson4);
+            this.Controls.Add(this.seatForPerson3);
+            this.Controls.Add(this.seatForPerson2);
             this.Controls.Add(this.seatForPerson1);
-            this.Controls.Add(this.person5);
-            this.Controls.Add(this.seat5);
-            this.Controls.Add(this.person4);
-            this.Controls.Add(this.seat4);
-            this.Controls.Add(this.person3);
-            this.Controls.Add(this.seat3);
-            this.Controls.Add(this.person2);
-            this.Controls.Add(this.seat2);
+            this.Controls.Add(this.rowForPerson5);
+            this.Controls.Add(this.labelSeat5);
+            this.Controls.Add(this.rowForPerson4);
+            this.Controls.Add(this.labelSeat4);
+            this.Controls.Add(this.rowForPerson3);
+            this.Controls.Add(this.labelSeat3);
+            this.Controls.Add(this.rowForPerson2);
+            this.Controls.Add(this.labelSeat2);
             this.Controls.Add(this.rowForPerson1);
-            this.Controls.Add(this.seat1);
+            this.Controls.Add(this.labelSeat1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.numberOfPeople);
             this.Controls.Add(this.label2);
@@ -287,20 +286,20 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox numberOfPeople;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label seat1;
+        private System.Windows.Forms.Label labelSeat1;
         private System.Windows.Forms.ComboBox rowForPerson1;
-        private System.Windows.Forms.ComboBox person2;
-        private System.Windows.Forms.Label seat2;
-        private System.Windows.Forms.ComboBox person3;
-        private System.Windows.Forms.Label seat3;
-        private System.Windows.Forms.ComboBox person4;
-        private System.Windows.Forms.Label seat4;
-        private System.Windows.Forms.ComboBox person5;
-        private System.Windows.Forms.Label seat5;
-        private System.Windows.Forms.ComboBox person55;
-        private System.Windows.Forms.ComboBox person44;
-        private System.Windows.Forms.ComboBox person33;
-        private System.Windows.Forms.ComboBox person22;
+        private System.Windows.Forms.ComboBox rowForPerson2;
+        private System.Windows.Forms.Label labelSeat2;
+        private System.Windows.Forms.ComboBox rowForPerson3;
+        private System.Windows.Forms.Label labelSeat3;
+        private System.Windows.Forms.ComboBox rowForPerson4;
+        private System.Windows.Forms.Label labelSeat4;
+        private System.Windows.Forms.ComboBox rowForPerson5;
+        private System.Windows.Forms.Label labelSeat5;
+        private System.Windows.Forms.ComboBox seatForPerson5;
+        private System.Windows.Forms.ComboBox seatForPerson4;
+        private System.Windows.Forms.ComboBox seatForPerson3;
+        private System.Windows.Forms.ComboBox seatForPerson2;
         private System.Windows.Forms.ComboBox seatForPerson1;
         private System.Windows.Forms.Label selectRow;
         private System.Windows.Forms.Label SelectSeatNr;
