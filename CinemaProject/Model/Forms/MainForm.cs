@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CinemaProject.Model.Repository;
 using CinemaProject.View;
+using CinemaProject.Model.Forms;
 
 namespace CinemaProject
 {
@@ -41,9 +42,8 @@ namespace CinemaProject
 
         private void movieList_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show("Faka drerrie");
-            ProcessStartInfo sInfo = new ProcessStartInfo("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
-            Process.Start(sInfo);
+            var reservationForm = new ReservationForm(1);
+            reservationForm.Show();
         }
     }
 }
