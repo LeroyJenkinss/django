@@ -1,20 +1,44 @@
-[         
-            {
-                "id" : 1,
-                "name" : "Sonic",
-                "releaseDate" : "2020-02-13",
-                "genre" : "Anime"
-            }, 
-            {                
-                "id" : 2,
-                "name" : "Birds Of Prey",
-                "releaseDate" : "2020-02-06",
-                "genre" : "Action"
-            },
-            {                
-                "id" : 3,
-                "name" : "SuperMan",
-                "releaseDate" : "2018-02-06",
-                "genre": "Action"
-            }    
-    ]
+[
+  {
+    "id_movieShowTime": 1,
+    "id_movie": 1,
+    "id_theaterRoom": 1,
+    "showTime": "2020-03-19 13:09:34.467",
+    "takenChairs": ["A1", "A2", ] //de stoelen die bij de theaterroom komen de ingenomen zijn, een op een overgenomen worden. alltheaterooms - taken chairs
+  },
+  {
+    "id_movieShowTime": 2,
+    "id_movie": 1,
+    "id_theaterRoom": 2,
+    "showTime": "2020-04-19 13:09:34.467",
+    "takenChairs": [ "A1", "A2" ]
+  },
+  {
+    "id_movieShowTime": 3,
+    "id_movie": 1,
+    "id_theaterRoom": 3,
+    "showTime": "2020-06-19 13:09:34.467",
+    "takenChairs": [ "A1", "A2" ]
+  },
+  {
+    "id_movieShowTime": 4,
+    "id_movie": 2,
+    "id_theaterRoom": 1,
+    "showTime": "2020-03-19 13:09:34.467",
+    "takenChairs": [ "A1", "A2" ]
+  },
+  {
+    "id_movieShowtime": 5,
+    "id_movie": 3,
+    "id_theaterRoom": 1,
+    "showTime": "2020-06-19 13:09:34.467",
+    "takenChairs": [ "A1", "A2" ]
+  },
+  {
+    "id_movieShowTime": 6,
+    "id_movie": 3,
+    "id_theaterRoom": 3,
+    "showTime": "2020-03-19 13:09:34.467",
+    "takenChairs": [ "A1", "A2" ]
+  }
+]
