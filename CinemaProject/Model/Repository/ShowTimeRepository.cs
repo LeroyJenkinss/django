@@ -28,22 +28,42 @@ namespace CinemaProject.Model.Repository
             return items;
         }
 
-        public List<ShowTimeView> allShowTimesForMovie(int id_Movie)
+        public ShowTimeView GetShowTime(int id_movieShowTime)
+        {
+            var allShowTimesForMovie = GetAll();
+            var showtime = allShowTimesForMovie.Single(x => x.Id_MovieShowTime == id_movieShowTime);
+
+            return showtime;
+        }
+
+
+        public List<ShowTimeView> GetAllShowTimesForMovie(int id_Movie)
         {  
             var allShowTimes = GetAll();
-
-
             return allShowTimes.Where(x => x.Id_Movie == id_Movie).ToList();
         }
 
-        public List<ShowTimeView> oneShowTimesForMovie(int id_Movie,int id_movieShowTime)
+
+        public void ReplaceTakenChair(List<string> chairs, int id_movieShowTime)
         {
-            var allShowTimes = GetAll();
+            // Get Individual showtime
+            var showTime = GetShowTime(id_movieShowTime);
 
+            // Append to the list of chairs that are taken of the showtime
+            showTime.TakenChairs.AddRange(chairs);
 
-            return allShowTimes.Where(x => x.Id_Movie == id_Movie && x.Id_MovieShowTime == id_movieShowTime).ToList();
+            // Get all showtimes without the individual showtime
+            var allShowTimes = GetAll().Where( x => x.Id_MovieShowTime != id_movieShowTime);
+
+            // Append the showtime in its whole to all showtimes
+            allShowTimes.Append(showTime);
+
+            // Convert to Json and extract
+            var json = JsonConvert.SerializeObject(allShowTimes);
+
+            var pathToJsonFile = GetPathToJson();
+            File.WriteAllText(pathToJsonFile, json);
         }
-
 
         public string GetPathToJson()
         {

@@ -1,44 +1,44 @@
-[         
-            {
-              "id_TheaterRoom" : 1,
-              "allChairs": [
-                "A1",
-                "A2",
-                "A3",
-                "A4",
-                "A5",
-                "B1",
-                "B2",
-                "B3",
-                "B4"
-              ]
-            }, 
-            {                
-              "id_TheaterRoom" : 2,
-              "allChairs": [
-                "A1",
-                "A2",
-                "A3",
-                "A4",
-                "A5",
-                "B1",
-                "B2",
-                "B3",
-                "B4"
-              ]
-            },
-            {
-              "id_TheaterRoom": 3,
-              "allChairs": [
-                "A1",
-                "A2",
-                "A3",
-                "A4",
-                "A5",
-                "B1",
-                "B2",
-                "B3",
-                "B4"
-              ]
-            }    
+[
+  {
+    "id_theaterRoom": 1, //is gelijk aan de RoomId
+    "allChairs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "B1",
+      "B2",
+      "B3",
+      "B4"
     ]
+  },
+  {
+    "id_theaterRoom": 2,
+    "allChairs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ]
+  },
+  {
+    "id_theaterRoom": 3,
+    "allChairs": [
+      "A1",
+      "A2",
+      "A3",
+      "A4",
+      "A5",
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ]
+  }    
+]

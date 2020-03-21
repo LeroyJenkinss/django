@@ -1,18 +1,18 @@
 [
   {
-    "movie_id": 1,
+    "id_movie": 1,
     "name": "Sonic",
     "releaseDate": "2020-02-13",
     "genre": "Anime"
   },
   {
-    "movie_id": 2,
+    "id_movie": 2,
     "name": "Birds Of Prey",
     "releaseDate": "2020-02-06",
     "genre": "Action"
   },
   {
-    "movie_id": 3,
+    "id_movie": 3,
     "name": "SuperMan",
     "releaseDate": "2018-02-06",
     "genre": "Action"

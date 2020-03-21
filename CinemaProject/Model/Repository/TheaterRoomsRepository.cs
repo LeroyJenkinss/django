@@ -10,32 +10,30 @@ using Newtonsoft.Json;
 
 namespace CinemaProject.Model.Repository
 {
-    public class TheatherRepository {
+    public class TheaterRoomsRepository {
 
-        public List<TheaterView> Getall() {
+        public List<TheaterRoomView> GetAll() {
 
             var pathToJsonFile = GetPathToJson();
 
-            List<TheaterView> items;
+            List<TheaterRoomView> items;
 
             using (StreamReader r = new StreamReader(pathToJsonFile))
             {
                 string json = r.ReadToEnd();
-                items = JsonConvert.DeserializeObject<List<TheaterView>>(json);
+                items = JsonConvert.DeserializeObject<List<TheaterRoomView>>(json);
             }
 
             return items;
 
         }
 
-        public List<string> allChiarsInTheatherRoom(int id_TheaterRoom) {
-            var allObjects = Getall();
-            var singleObject = allObjects.Find(x => x.Id_TheaterRoom == id_TheaterRoom);
+        public TheaterRoomView GetTheaterRoom(int id_TheaterRoom) {
+            var allTheaterRooms = GetAll();
+            var theaterRoom = allTheaterRooms.Find(x => x.Id_TheaterRoom == id_TheaterRoom);
 
-            var allChairsinTheaterRoom = singleObject.AllChairs.ToList();
-            return allChairsinTheaterRoom;
-
-        }
+            return theaterRoom;  
+        } // haal theaterroom met stoelen op
 
         public string GetPathToJson()
         {
@@ -48,6 +46,7 @@ namespace CinemaProject.Model.Repository
     }
 
 
+
+
+
 }
-
-

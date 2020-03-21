@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace CinemaProject.View
 {
-    public class TheaterView
+    public class TheaterRoomView
     {
         public int Id_TheaterRoom;
-        public string[] AllChairs;
+        public List<string> AllChairs;
 
 
 
-        public TheaterView(int id_TheaterRoom, string[] allChairs)
+        public TheaterRoomView(int id_theaterRoom, List<string> allChairs)
         {
-            Id_TheaterRoom = id_TheaterRoom;
+            Id_TheaterRoom = id_theaterRoom;
             AllChairs = allChairs;
 
         }

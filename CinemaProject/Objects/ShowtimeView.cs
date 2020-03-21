@@ -10,16 +10,19 @@ namespace CinemaProject.View
     {
         public int Id_MovieShowTime;
         public int Id_Movie;
-        public DateTime Showtime;
+        public DateTime ShowTime;
+        public List<string> TakenChairs; 
 
         public ShowTimeView(
-            int id_movieshowtime,
+            int id_movieShowTime,
             int id_movie,
-            int showtime)
+            DateTime showTime,
+            List<string> takenChairs)
         {
-            Id_MovieShowTime = id_movieshowtime;
+            Id_MovieShowTime = id_movieShowTime;
             Id_Movie = id_movie;
-            Showtime = showtime;
+            ShowTime = showTime;
+            TakenChairs = takenChairs;
         }
     }
 }
