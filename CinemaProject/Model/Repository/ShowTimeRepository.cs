@@ -7,11 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using Org.BouncyCastle.Utilities;
 
 namespace CinemaProject.Model.Repository
 {
-    public class ShowTimeRepository 
+    public class ShowTimeRepository
     {
         public List<ShowTimeView> GetAll()
         {
@@ -38,13 +37,13 @@ namespace CinemaProject.Model.Repository
 
 
         public List<ShowTimeView> GetAllShowTimesForMovie(int id_Movie)
-        {  
+        {
             var allShowTimes = GetAll();
             return allShowTimes.Where(x => x.Id_Movie == id_Movie).ToList();
         }
 
 
-        public void ReplaceTakenChair(List<string> chairs, int id_movieShowTime)
+        public void AddNewTakenChairs(List<string> chairs, int id_movieShowTime)
         {
             // Get Individual showtime
             var showTime = GetShowTime(id_movieShowTime);
@@ -53,10 +52,10 @@ namespace CinemaProject.Model.Repository
             showTime.TakenChairs.AddRange(chairs);
 
             // Get all showtimes without the individual showtime
-            var allShowTimes = GetAll().Where( x => x.Id_MovieShowTime != id_movieShowTime);
+            var allShowTimes = GetAll().Where(x => x.Id_MovieShowTime != id_movieShowTime).ToList();
 
             // Append the showtime in its whole to all showtimes
-            allShowTimes.Append(showTime);
+            allShowTimes.Add(showTime);
 
             // Convert to Json and extract
             var json = JsonConvert.SerializeObject(allShowTimes);
