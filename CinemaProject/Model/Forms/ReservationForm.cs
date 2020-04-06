@@ -112,7 +112,7 @@ namespace CinemaProject.Model.Forms
 
             var popUpView = new ReservationPopupView(MovieShowTime, 
                                                     GetFilledInFormSeats(), 
-                                                    firstName.Text, lastName.Text, 
+                                                    firstNameFill.Text, lastNameFill.Text, 
                                                     paymentMethod.Text, cardNumber.Text);
             ShowReservationPopUp(popUpView);
         }
@@ -120,7 +120,7 @@ namespace CinemaProject.Model.Forms
         private void ShowReservationPopUp(ReservationPopupView popUpView)
         {
             // the pop up for the reservation with data in popUpView
-            var newForm = new popUpMakeReservation(popUpView);
+            var newForm = new PopUpMakeReservation(popUpView);
             newForm.Show();
         }
 
@@ -147,12 +147,12 @@ namespace CinemaProject.Model.Forms
             if (rowDropdown.Text.Length == 1)
             {
                 var chairRow = char.Parse(rowDropdown.Text);
-                var availableRowsAndSeats = _reservationFormService.GetDistinctListOfAvaiableChairRowsAndChairNumber(id_MovieShowtime, GetFilledInFormSeats());
+                var availableRowsAndSeats = _reservationFormService.GetDistinctListOfAvaiableChairRowsAndChairNumber(MovieShowTime.Id_MovieShowTime, GetFilledInFormSeats());
                 if (availableRowsAndSeats.ContainsKey(chairRow))
                 {
                     var availableSeatsForRow = availableRowsAndSeats[chairRow];
 
-                    seatDropdown.UpdateDropDown(id_MovieShowtime, availableSeatsForRow);
+                    seatDropdown.UpdateDropDown(MovieShowTime.Id_MovieShowTime, availableSeatsForRow);
 
                 }
             }
@@ -160,9 +160,9 @@ namespace CinemaProject.Model.Forms
 
         private void rowForPersonGrouped_Click(object sender, EventArgs e, ComboBox rowDropdown, ComboBox seatDropdown)
         {
-            var availableRowsAndSeats = _reservationFormService.GetDistinctListOfAvaiableChairRowsAndChairNumber(id_MovieShowtime, GetFilledInFormSeats());
+            var availableRowsAndSeats = _reservationFormService.GetDistinctListOfAvaiableChairRowsAndChairNumber(MovieShowTime.Id_MovieShowTime, GetFilledInFormSeats());
             var availableRows = availableRowsAndSeats.Keys.ToList();
-            rowDropdown.UpdateDropDown(id_MovieShowtime, availableRows);
+            rowDropdown.UpdateDropDown(MovieShowTime.Id_MovieShowTime, availableRows);
         }
 
         private void rowForPersonGrouped_ValueChanged(object sender, EventArgs e, ComboBox seatDropdown)
