@@ -35,20 +35,17 @@ namespace CinemaProject.Model.Repository
             return showtime;
         }
 
-
         public List<ShowTimeView> GetAllShowTimesForMovie(int id_Movie)
-        {  
+        {
             var allShowTimes = GetAll();
             return allShowTimes.Where(x => x.Id_Movie == id_Movie).ToList();
         }
-
 
         public void AddNewTakenChairs(List<string> chairs, int id_movieShowTime)
         {
             // Note for Tarik en Kay: De methode mist nog een check of de stoelen die gereserveerd worden al in de lijst van stoelen zit van de showtime
             // Ik stel voor om een check te bouwen die kijkt of de nieuwe stoelen die gereserveerd worden (chairs) al in de lijst van showTime.TakenChairs
             // Als er een stoel al in zit moet er een exception gethrowd worden, succes ehhh
-
 
             // Get Individual showtime
             var showTime = GetShowTime(id_movieShowTime);

@@ -31,7 +31,6 @@ namespace CinemaProject
             {
                 movieList.Items.Add(i.Name);
                 movieList.Items.Add(i.Genre);
-                
             }
 
 
