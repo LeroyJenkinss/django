@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 
 namespace CinemaProject.Model.Forms
 {
@@ -17,41 +18,27 @@ namespace CinemaProject.Model.Forms
     {
         private readonly ReservationFormService _reservationFormService;
         private readonly ShowTimeRepository _showTimeRepository;
-        private readonly int id_MovieShowtime;
+        private readonly ShowTimeView MovieShowTime;
 
         public ReservationForm(int id_movieShowTime)
         {
             InitializeComponent();
-            id_MovieShowtime = id_movieShowTime;
             _reservationFormService = new ReservationFormService();
             _showTimeRepository = new ShowTimeRepository();
+            MovieShowTime = _showTimeRepository.GetShowTime(id_movieShowTime);
         }
 
         private void ReservationForm_Load(object sender, EventArgs e)
         {
             InitializeGroupedFunctions();
 
-            // Note for Leon: probeer duplicate code in een apparte methode te stoppen,
+            
             // zo hoef je alleen de methode aan te roepen in plaats van dezelfde code her te gebruiken. (opdezelfde manier als hoe ik InitializeGroupedFunctions() heb gemaakt)
             // Oh ja en maak nog even een veld voor name en lastname. Plus een dropdown met betaal mogelijkheden (iDeal, CreditCard en Betalen bij bioscoop), deze moet terug komen bij de reserveringbevestiging
 
             selectRow.Visible = false;
             SelectSeatNr.Visible = false;
-            rowForPerson1.Visible = false;
-            rowForPerson2.Visible = false;
-            rowForPerson3.Visible = false;
-            rowForPerson4.Visible = false;
-            rowForPerson5.Visible = false;
-            seatForPerson1.Visible = false;
-            seatForPerson2.Visible = false;
-            seatForPerson3.Visible = false;
-            seatForPerson4.Visible = false;
-            seatForPerson5.Visible = false;
-            labelSeat1.Visible = false;
-            labelSeat2.Visible = false;
-            labelSeat3.Visible = false;
-            labelSeat4.Visible = false;
-            labelSeat5.Visible = false;
+            VisibleFalse();
 
             var maxPeople = new string[] { "1", "2", "3", "4", "5" }; 
             foreach (var item in maxPeople) 
@@ -59,26 +46,24 @@ namespace CinemaProject.Model.Forms
                 numberOfPeople.Text = "Number of people ...";
                 numberOfPeople.Items.Add(item);  
             }
+            cardNumber.Visible = false;
+
+            const string V = "Ideal";
+            const string V1 = "Creditcard";
+            const string V2 = "At counter";
+            var methodPayment = new string[] { V, V1, V2 };
+            foreach (var item in methodPayment)
+            {
+                paymentMethod.Text = "...";
+                paymentMethod.Items.Add(item);
+            }
+
         }     
          
         private void numberOfPeople_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Not for Leon: Zie regel 34)
-            rowForPerson1.Visible = false;
-            rowForPerson2.Visible = false;
-            rowForPerson3.Visible = false;
-            rowForPerson4.Visible = false;
-            rowForPerson5.Visible = false;
-            seatForPerson1.Visible = false;
-            seatForPerson2.Visible = false;
-            seatForPerson3.Visible = false;
-            seatForPerson4.Visible = false;
-            seatForPerson5.Visible = false;
-            labelSeat1.Visible = false;
-            labelSeat2.Visible = false;
-            labelSeat3.Visible = false;
-            labelSeat4.Visible = false;
-            labelSeat5.Visible = false;
+           
+            VisibleFalse();
 
             var reservationQuantity = int.Parse(numberOfPeople.Text);
             var counter = 0;
@@ -123,18 +108,20 @@ namespace CinemaProject.Model.Forms
         private void submitReservation_Click(object sender, EventArgs e)
         {
             var newTakenChairs = GetFilledInFormSeats();
-            _showTimeRepository.AddNewTakenChairs(newTakenChairs, id_MovieShowtime);
+            _showTimeRepository.AddNewTakenChairs(newTakenChairs, MovieShowTime.Id_MovieShowTime);
 
-            ShowReservationPopUp();
+            var popUpView = new ReservationPopupView(MovieShowTime, 
+                                                    GetFilledInFormSeats(), 
+                                                    firstName.Text, lastName.Text, 
+                                                    paymentMethod.Text, cardNumber.Text);
+            ShowReservationPopUp(popUpView);
         }
 
-        private void ShowReservationPopUp()
+        private void ShowReservationPopUp(ReservationPopupView popUpView)
         {
-            // Note for Leon: Maak hier een pop up met de reserveringsbevestiging. Ik heb al een methode voor je gebouwd waarin je je code kan plaatsen, deze wordt aangeroepen bij het klikken van submit button
-            // Gewoon iets stoms als "Betaling gelukt! Bedankt voor je reservatie dit zijn je reserveringsgegevens" en dan naam, achternaam, aantal gasten en de stoelen die gereserveerd zijn laten zien
-            // the de reservatieform moet ook sluiten na het weg klikken van de popup
-            // Verwijder onderstaande lijn en plaats je nieuwe code
-            throw new NotImplementedException();
+            // the pop up for the reservation with data in popUpView
+            var newForm = new popUpMakeReservation(popUpView);
+            newForm.Show();
         }
 
         private List<string> GetFilledInFormSeats()
@@ -183,6 +170,26 @@ namespace CinemaProject.Model.Forms
             seatDropdown.ResetText();
         }
 
+
+        // To set visible to false
+        public void VisibleFalse()
+        {
+            rowForPerson1.Visible = false;
+            rowForPerson2.Visible = false;
+            rowForPerson3.Visible = false;
+            rowForPerson4.Visible = false;
+            rowForPerson5.Visible = false;
+            seatForPerson1.Visible = false;
+            seatForPerson2.Visible = false;
+            seatForPerson3.Visible = false;
+            seatForPerson4.Visible = false;
+            seatForPerson5.Visible = false;
+            labelSeat1.Visible = false;
+            labelSeat2.Visible = false;
+            labelSeat3.Visible = false;
+            labelSeat4.Visible = false;
+            labelSeat5.Visible = false;
+        }
         // To map all elements to the corresponding methods
         public void InitializeGroupedFunctions()
         {
@@ -204,5 +211,36 @@ namespace CinemaProject.Model.Forms
             rowForPerson4.DropDownClosed += (sender, e) => rowForPersonGrouped_ValueChanged(sender, e, seatForPerson4);
             rowForPerson5.DropDownClosed += (sender, e) => rowForPersonGrouped_ValueChanged(sender, e, seatForPerson5);
         }
-    }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastNameFill_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paymentMethod_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            
+            if (paymentMethod.Text == "Ideal")
+            {
+                cardNumber.Visible = true;
+            }
+            else if (paymentMethod.Text == "Creditcard")
+            {
+                cardNumber.Visible = true;
+            }
+            else 
+            {
+                cardNumber.Visible = false;
+            }
+        }
+
+    
 }
+    }
+
