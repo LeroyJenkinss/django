@@ -48,10 +48,23 @@ namespace CinemaProject.Model.Repository
             // Note for Tarik en Kay: De methode mist nog een check of de stoelen die gereserveerd worden al in de lijst van stoelen zit van de showtime
             // Ik stel voor om een check te bouwen die kijkt of de nieuwe stoelen die gereserveerd worden (chairs) al in de lijst van showTime.TakenChairs
             // Als er een stoel al in zit moet er een exception gethrowd worden, succes ehhh
-
+            
 
             // Get Individual showtime
             var showTime = GetShowTime(id_movieShowTime);
+
+
+            // Checking if requested reservation is already booked.
+            for (int a = 0; a < showTime.TakenChairs.Count; a++) 
+            {
+                for (int b = 0; b < chairs.Count; b++)
+                {
+                    if (showTime.TakenChairs[a] == chairs[b]) 
+                    {
+                        throw new System.InvalidOperationException("The requested booking can not be provided");
+                    }
+                }
+            }
 
             // Append to the list of chairs that are taken of the showtime
             showTime.TakenChairs.AddRange(chairs);
