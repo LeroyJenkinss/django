@@ -52,7 +52,7 @@ namespace CinemaProject.Model.Repository
 
             // Get Individual showtime
             var showTime = GetShowTime(id_movieShowTime);
-
+            
 
             // Checking if requested reservation is already booked.
             for (int a = 0; a < showTime.TakenChairs.Count; a++) 
@@ -61,7 +61,7 @@ namespace CinemaProject.Model.Repository
                 {
                     if (showTime.TakenChairs[a] == chairs[b]) 
                     {
-                        throw new System.InvalidOperationException("The requested booking can not be provided");
+                        throw new System.InvalidOperationException("The requested booking can not be provided, the following chair is already taken:"+ chairs[b]);
                     }
                 }
             }
