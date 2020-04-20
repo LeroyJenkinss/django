@@ -43,25 +43,26 @@ namespace CinemaProject.Model.Repository
 
         public void AddNewTakenChairs(List<string> chairs, int id_movieShowTime)
         {
-            // Note for Tarik en Kay: De methode mist nog een check of de stoelen die gereserveerd worden al in de lijst van stoelen zit van de showtime
-            // Ik stel voor om een check te bouwen die kijkt of de nieuwe stoelen die gereserveerd worden (chairs) al in de lijst van showTime.TakenChairs
-            // Als er een stoel al in zit moet er een exception gethrowd worden, succes ehhh
-
             // Get Individual showtime
             var showTime = GetShowTime(id_movieShowTime);
-            
 
             // Checking if requested reservation is already booked.
-            for (int a = 0; a < showTime.TakenChairs.Count; a++) 
+            for (int a = 0; a < showTime.TakenChairs.Count; a++)
             {
                 for (int b = 0; b < chairs.Count; b++)
                 {
-                    if (showTime.TakenChairs[a] == chairs[b]) 
+                    if (showTime.TakenChairs[a] == chairs[b])
                     {
-                        throw new System.InvalidOperationException("The requested booking can not be provided, the following chair is already taken: "+ chairs[b]);
+                        throw new System.InvalidOperationException("The requested booking can not be provided, the following chair is already taken: " + chairs[b]);
                     }
                 }
             }
+
+            // Is ook op te lossen met een Linq statement: (C# specifieke oplossing)
+            //if (showTime.TakenChairs.Any( takenChair => chairs.Contains(takenChair)))
+            //{
+            //    throw new System.InvalidOperationException("The requested booking can not be provided, the following chair is already taken: ");
+            //};
 
             // Append to the list of chairs that are taken of the showtime
             showTime.TakenChairs.AddRange(chairs);
@@ -81,12 +82,27 @@ namespace CinemaProject.Model.Repository
 
         public void RemoveTakenChairs(List<string> chairs, int id_movieShowTime)
         {
-            // Note for Tarik en Kay: Okee nu mogen jullie uitvogelen hoe je chairs van de lijst uit taken chairs eruit gooit.
-            // De methode ontvangt een lijst van stoelen, deze stoelen moeten uit de lijst van TakenChairs van de bijbehorend showtime eruit gegooid moet worden
-            // Ik zou ook nog dubbel checken of de lijst van stoelen wel uberhaupt in de lijst van TakenChairs van het json zich bestandje bevind
-            // In dat geval zal ik geen exception throwen maar eerder de chair overslaan. 
-            // Verwijder onderstaande lijn en plaats je nieuwe code, Succes drollen
-            throw new NotImplementedException();
+            var currentShowTime = GetShowTime(id_movieShowTime);
+
+            List<string> takenChairs = currentShowTime.TakenChairs.ToList();
+
+            if (takenChairs != null)
+            {
+                takenChairs = new List<string>();
+            }
+
+            takenChairs = takenChairs.Where( x => !chairs.Contains(x)).ToList();
+
+            var allShowTimes = GetAll().Where(x => x.Id_MovieShowTime != id_movieShowTime).ToList();
+
+            // Append the showtime in its whole to all showtimes
+            allShowTimes.Add(currentShowTime);
+
+            // Convert to Json and extract
+            var json = JsonConvert.SerializeObject(allShowTimes);
+
+            var pathToJsonFile = GetPathToJson();
+            File.WriteAllText(pathToJsonFile, json);
         }
 
         public string GetPathToJson()
