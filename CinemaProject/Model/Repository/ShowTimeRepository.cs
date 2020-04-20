@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace CinemaProject.Model.Repository
 {
-    public class ShowTimeRepository 
+    public class ShowTimeRepository
     {
         public List<ShowTimeView> GetAll()
         {
@@ -49,6 +49,19 @@ namespace CinemaProject.Model.Repository
 
             // Get Individual showtime
             var showTime = GetShowTime(id_movieShowTime);
+            
+
+            // Checking if requested reservation is already booked.
+            for (int a = 0; a < showTime.TakenChairs.Count; a++) 
+            {
+                for (int b = 0; b < chairs.Count; b++)
+                {
+                    if (showTime.TakenChairs[a] == chairs[b]) 
+                    {
+                        throw new System.InvalidOperationException("The requested booking can not be provided, the following chair is already taken: "+ chairs[b]);
+                    }
+                }
+            }
 
             // Append to the list of chairs that are taken of the showtime
             showTime.TakenChairs.AddRange(chairs);
