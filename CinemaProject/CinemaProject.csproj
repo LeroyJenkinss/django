@@ -73,6 +73,12 @@
     <Compile Include="Model\Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Forms\PopUpMakeReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Forms\PopUpMakeReservation.Designer.cs">
+      <DependentUpon>PopUpMakeReservation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Forms\ReservationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +89,15 @@
     <Compile Include="Model\Repository\ShowTimeRepository.cs" />
     <Compile Include="Model\Repository\TheaterRoomsRepository.cs" />
     <Compile Include="Model\Services\ReservationFormService.cs" />
+    <Compile Include="Objects\ReservationPopupView.cs" />
     <Compile Include="Objects\TheaterRoomView.cs" />
     <Compile Include="Objects\MovieView.cs" />
     <Compile Include="Objects\ShowtimeView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Model\Forms\PopUpMakeReservation.resx">
+      <DependentUpon>PopUpMakeReservation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Model\Forms\ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </EmbeddedResource>

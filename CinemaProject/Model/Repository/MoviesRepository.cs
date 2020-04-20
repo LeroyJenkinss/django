@@ -27,6 +27,14 @@ namespace CinemaProject.Model.Repository
             return items;
         }
 
+        public MovieView GetMovie(int id_movie)
+        {
+            var allShowTimesForMovie = GetAll();
+            var movie = allShowTimesForMovie.Single(x => x.Id_Movie == id_movie);
+
+            return movie;
+        }
+
         public void AddMovie(string movieTitle, DateTime releaseDate,string genre)
         {
             var allMovies = GetAll();
