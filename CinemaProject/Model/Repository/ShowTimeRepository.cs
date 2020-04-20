@@ -61,7 +61,7 @@ namespace CinemaProject.Model.Repository
                 {
                     if (showTime.TakenChairs[a] == chairs[b]) 
                     {
-                        throw new System.InvalidOperationException("The requested booking can not be provided, the following chair is already taken:"+ chairs[b]);
+                        throw new System.InvalidOperationException("The requested booking can not be provided, the following chair is already taken: "+ chairs[b]);
                     }
                 }
             }
