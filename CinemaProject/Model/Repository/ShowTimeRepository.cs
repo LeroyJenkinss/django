@@ -27,6 +27,21 @@ namespace CinemaProject.Model.Repository
             return items;
         }
 
+        public List<TheaterRoomView> GetAlltheather()
+        {
+            var pathToJsonFile = GetPathToJson();
+
+            List<TheaterRoomView> items;
+
+            using (StreamReader r = new StreamReader(pathToJsonFile))
+            {
+                string json = r.ReadToEnd();
+                items = JsonConvert.DeserializeObject<List<TheaterRoomView>>(json);
+            }
+
+            return items;
+        }
+
         public ShowTimeView GetShowTime(int id_movieShowTime)
         {
             var allShowTimesForMovie = GetAll();
@@ -35,10 +50,31 @@ namespace CinemaProject.Model.Repository
             return showtime;
         }
 
-        public List<ShowTimeView> GetAllShowTimesForMovie(int id_Movie)
+        public List<DateTime> GetAllShowTimesForMovie(int id_movie, int id_theatherRoom)
         {
-            var allShowTimes = GetAll();
-            return allShowTimes.Where(x => x.Id_Movie == id_Movie).ToList();
+            
+            List<DateTime> times = new List<DateTime>();
+            List<string> takenchair = new List<string>();
+
+            var allShowTime = GetAll();
+            var showtimes = allShowTime.Where(x => x.Id_Movie == id_movie && x.Id_TheaterRoom == id_theatherRoom).ToList();
+
+            
+
+            var allchairs = GetAlltheather();
+            var chairsOfRoom = allchairs.Where(x => x.Id_TheaterRoom == id_theatherRoom).ToList();
+
+            for (int a = 0; a < showtimes.Count(); a++)
+            {
+                var takenchairsMovie = showtimes[a].TakenChairs;
+                if (takenchairsMovie.Count() != chairsOfRoom.Count())
+                {
+                    times.Add(showtimes[a].ShowTime);
+                }
+
+            }
+            return times;
+            
         }
 
         public void AddNewTakenChairs(List<string> chairs, int id_movieShowTime)
