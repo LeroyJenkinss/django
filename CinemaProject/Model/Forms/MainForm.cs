@@ -29,7 +29,7 @@ namespace CinemaProject
             var allMovies = _moviesRepository.GetAll();
             foreach (MovieView i in allMovies)
             {
-                movieList.Items.Add(i.Name);
+                movieList.Items.Add(i.Id_Movie+": "+i.Name);
                 movieList.Items.Add(i.Genre);
             }
 
@@ -41,8 +41,10 @@ namespace CinemaProject
 
         private void movieList_DoubleClick(object sender, EventArgs e)
         {
-            var reservationForm = new ReservationForm(1);
-            reservationForm.Show();
+            string selectedItem = movieList.Items[movieList.SelectedIndex].ToString();
+            var GetMovieId = selectedItem.Split(':')[0];
+            var MovieForm = new MovieForm(int.Parse(GetMovieId));
+            MovieForm.Show();
         }
     }
 }
