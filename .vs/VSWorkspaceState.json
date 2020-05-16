@@ -5,9 +5,10 @@
     "\\CinemaProject\\Data",
     "\\CinemaProject\\Forms",
     "\\CinemaProject\\Model",
+    "\\CinemaProject\\Model\\Forms",
     "\\CinemaProject\\Model\\Repository",
     "\\CinemaProject\\Objects"
   ],
-  "SelectedNode": "\\CinemaProject\\Model\\Repository\\ShowTimeRepository.cs",
+  "SelectedNode": "\\CinemaProject\\Model\\Forms\\MovieForm.cs",
   "PreviewInSolutionExplorer": false
 }

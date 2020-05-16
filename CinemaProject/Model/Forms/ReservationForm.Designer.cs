@@ -60,6 +60,8 @@
             // firstName
             // 
             this.firstName.AutoSize = true;
+            this.firstName.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.firstName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.firstName.Location = new System.Drawing.Point(12, 42);
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(55, 13);
@@ -69,6 +71,8 @@
             // lastName
             // 
             this.lastName.AutoSize = true;
+            this.lastName.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lastName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lastName.Location = new System.Drawing.Point(12, 69);
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(56, 13);
@@ -77,6 +81,8 @@
             // 
             // numberOfPeople
             // 
+            this.numberOfPeople.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.numberOfPeople.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.numberOfPeople.FormattingEnabled = true;
             this.numberOfPeople.Location = new System.Drawing.Point(228, 91);
             this.numberOfPeople.Name = "numberOfPeople";
@@ -87,6 +93,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(12, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(201, 13);
@@ -96,6 +104,8 @@
             // labelSeat1
             // 
             this.labelSeat1.AutoSize = true;
+            this.labelSeat1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelSeat1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelSeat1.Location = new System.Drawing.Point(175, 142);
             this.labelSeat1.Name = "labelSeat1";
             this.labelSeat1.Size = new System.Drawing.Size(38, 13);
@@ -104,6 +114,8 @@
             // 
             // rowForPerson1
             // 
+            this.rowForPerson1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.rowForPerson1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rowForPerson1.FormattingEnabled = true;
             this.rowForPerson1.Location = new System.Drawing.Point(228, 142);
             this.rowForPerson1.Name = "rowForPerson1";
@@ -112,6 +124,8 @@
             // 
             // rowForPerson2
             // 
+            this.rowForPerson2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.rowForPerson2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rowForPerson2.FormattingEnabled = true;
             this.rowForPerson2.Location = new System.Drawing.Point(228, 178);
             this.rowForPerson2.Name = "rowForPerson2";
@@ -121,6 +135,8 @@
             // labelSeat2
             // 
             this.labelSeat2.AutoSize = true;
+            this.labelSeat2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelSeat2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelSeat2.Location = new System.Drawing.Point(175, 178);
             this.labelSeat2.Name = "labelSeat2";
             this.labelSeat2.Size = new System.Drawing.Size(38, 13);
@@ -129,6 +145,8 @@
             // 
             // rowForPerson3
             // 
+            this.rowForPerson3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.rowForPerson3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rowForPerson3.FormattingEnabled = true;
             this.rowForPerson3.Location = new System.Drawing.Point(228, 214);
             this.rowForPerson3.Name = "rowForPerson3";
@@ -138,6 +156,8 @@
             // labelSeat3
             // 
             this.labelSeat3.AutoSize = true;
+            this.labelSeat3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelSeat3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelSeat3.Location = new System.Drawing.Point(175, 214);
             this.labelSeat3.Name = "labelSeat3";
             this.labelSeat3.Size = new System.Drawing.Size(38, 13);
@@ -146,6 +166,8 @@
             // 
             // rowForPerson4
             // 
+            this.rowForPerson4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.rowForPerson4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rowForPerson4.FormattingEnabled = true;
             this.rowForPerson4.Location = new System.Drawing.Point(228, 250);
             this.rowForPerson4.Name = "rowForPerson4";
@@ -155,6 +177,8 @@
             // labelSeat4
             // 
             this.labelSeat4.AutoSize = true;
+            this.labelSeat4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelSeat4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelSeat4.Location = new System.Drawing.Point(175, 250);
             this.labelSeat4.Name = "labelSeat4";
             this.labelSeat4.Size = new System.Drawing.Size(38, 13);
@@ -163,6 +187,8 @@
             // 
             // rowForPerson5
             // 
+            this.rowForPerson5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.rowForPerson5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.rowForPerson5.FormattingEnabled = true;
             this.rowForPerson5.Location = new System.Drawing.Point(228, 286);
             this.rowForPerson5.Name = "rowForPerson5";
@@ -172,6 +198,8 @@
             // labelSeat5
             // 
             this.labelSeat5.AutoSize = true;
+            this.labelSeat5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelSeat5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelSeat5.Location = new System.Drawing.Point(175, 286);
             this.labelSeat5.Name = "labelSeat5";
             this.labelSeat5.Size = new System.Drawing.Size(38, 13);
@@ -180,6 +208,8 @@
             // 
             // seatForPerson5
             // 
+            this.seatForPerson5.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.seatForPerson5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.seatForPerson5.FormattingEnabled = true;
             this.seatForPerson5.Location = new System.Drawing.Point(308, 286);
             this.seatForPerson5.Name = "seatForPerson5";
@@ -188,6 +218,8 @@
             // 
             // seatForPerson4
             // 
+            this.seatForPerson4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.seatForPerson4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.seatForPerson4.FormattingEnabled = true;
             this.seatForPerson4.Location = new System.Drawing.Point(308, 250);
             this.seatForPerson4.Name = "seatForPerson4";
@@ -196,6 +228,8 @@
             // 
             // seatForPerson3
             // 
+            this.seatForPerson3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.seatForPerson3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.seatForPerson3.FormattingEnabled = true;
             this.seatForPerson3.Location = new System.Drawing.Point(308, 214);
             this.seatForPerson3.Name = "seatForPerson3";
@@ -204,6 +238,8 @@
             // 
             // seatForPerson2
             // 
+            this.seatForPerson2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.seatForPerson2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.seatForPerson2.FormattingEnabled = true;
             this.seatForPerson2.Location = new System.Drawing.Point(308, 178);
             this.seatForPerson2.Name = "seatForPerson2";
@@ -212,6 +248,8 @@
             // 
             // seatForPerson1
             // 
+            this.seatForPerson1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.seatForPerson1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.seatForPerson1.FormattingEnabled = true;
             this.seatForPerson1.Location = new System.Drawing.Point(308, 142);
             this.seatForPerson1.Name = "seatForPerson1";
@@ -221,6 +259,8 @@
             // selectRow
             // 
             this.selectRow.AutoSize = true;
+            this.selectRow.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.selectRow.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.selectRow.Location = new System.Drawing.Point(228, 123);
             this.selectRow.Name = "selectRow";
             this.selectRow.Size = new System.Drawing.Size(62, 13);
@@ -230,6 +270,8 @@
             // SelectSeatNr
             // 
             this.SelectSeatNr.AutoSize = true;
+            this.SelectSeatNr.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SelectSeatNr.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.SelectSeatNr.Location = new System.Drawing.Point(305, 123);
             this.SelectSeatNr.Name = "SelectSeatNr";
             this.SelectSeatNr.Size = new System.Drawing.Size(98, 13);
@@ -248,6 +290,8 @@
             // 
             // firstNameFill
             // 
+            this.firstNameFill.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.firstNameFill.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.firstNameFill.Location = new System.Drawing.Point(228, 39);
             this.firstNameFill.Name = "firstNameFill";
             this.firstNameFill.Size = new System.Drawing.Size(121, 20);
@@ -256,6 +300,8 @@
             // 
             // lastNameFill
             // 
+            this.lastNameFill.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lastNameFill.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lastNameFill.Location = new System.Drawing.Point(228, 66);
             this.lastNameFill.Name = "lastNameFill";
             this.lastNameFill.Size = new System.Drawing.Size(121, 20);
@@ -265,6 +311,8 @@
             // methodOfPaymentChoice
             // 
             this.methodOfPaymentChoice.AutoSize = true;
+            this.methodOfPaymentChoice.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.methodOfPaymentChoice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.methodOfPaymentChoice.Location = new System.Drawing.Point(228, 326);
             this.methodOfPaymentChoice.Name = "methodOfPaymentChoice";
             this.methodOfPaymentChoice.Size = new System.Drawing.Size(136, 13);
@@ -273,6 +321,8 @@
             // 
             // paymentMethod
             // 
+            this.paymentMethod.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.paymentMethod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.paymentMethod.FormattingEnabled = true;
             this.paymentMethod.Location = new System.Drawing.Point(228, 342);
             this.paymentMethod.Name = "paymentMethod";
@@ -282,6 +332,8 @@
             // 
             // cardNumber
             // 
+            this.cardNumber.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cardNumber.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.cardNumber.Location = new System.Drawing.Point(375, 343);
             this.cardNumber.Name = "cardNumber";
             this.cardNumber.Size = new System.Drawing.Size(183, 20);
@@ -291,6 +343,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cardNumber);
             this.Controls.Add(this.paymentMethod);
