@@ -3,18 +3,24 @@
     "id_movie": 1,
     "name": "Sonic",
     "releaseDate": "2020-02-13",
-    "genre": "Anime"
+    "genre": "Anime",
+    "description": "lol",
+    "picture": "https://m.media-amazon.com/images/M/MV5BMDk5Yzc4NzMtODUwOS00NTdhLTg2MjEtZTkzZjc0ZWE2MzAwXkEyXkFqcGdeQXVyMTA3MTA4Mzgw._V1_UX182_CR0,0,182,268_AL_.jpg"
   },
   {
     "id_movie": 2,
     "name": "Birds Of Prey",
     "releaseDate": "2020-02-06",
-    "genre": "Action"
+    "genre": "Action",
+    "description": "lol2",
+    "picture": "https://www.moviemeter.nl/images/cover/1124000/1124290.jpg?cb=1583606762"
   },
   {
     "id_movie": 3,
     "name": "SuperMan",
     "releaseDate": "2018-02-06",
-    "genre": "Action"
+    "genre": "Action",
+    "description": "lol3",
+    "picture": "https://m.media-amazon.com/images/M/MV5BNzY2ZDQ2MTctYzlhOC00MWJhLTgxMmItMDgzNDQwMDdhOWI2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX182_CR0,0,182,268_AL_.jpg"
   }
 ]

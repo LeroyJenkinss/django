@@ -35,11 +35,11 @@ namespace CinemaProject.Model.Repository
             return movie;
         }
 
-        public void AddMovie(string movieTitle, DateTime releaseDate,string genre)
+        public void AddMovie(string movieTitle, DateTime releaseDate,string genre, string picture, string description)
         {
             var allMovies = GetAll();
             var newId = allMovies.Max(x => x.Id_Movie);
-            var movieToAdd = new MovieView(newId, movieTitle, genre, releaseDate);
+            var movieToAdd = new MovieView(newId, movieTitle, genre, releaseDate, description, picture);
             allMovies.Append(movieToAdd);
 
             var json = JsonConvert.SerializeObject(allMovies);
