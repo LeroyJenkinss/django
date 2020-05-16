@@ -52,5 +52,10 @@ namespace CinemaProject.Model.Forms
             var ReservationForm = new ReservationForm(int.Parse(GetMovieShowtimeId));
             ReservationForm.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

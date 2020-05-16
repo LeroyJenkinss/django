@@ -35,40 +35,40 @@
             // 
             // grid
             // 
+            this.grid.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.grid.ColumnCount = 2;
             this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 852F));
+            this.grid.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 639F));
             this.grid.Controls.Add(this.movieList, 1, 1);
             this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid.Location = new System.Drawing.Point(0, 0);
-            this.grid.Margin = new System.Windows.Forms.Padding(4);
             this.grid.Name = "grid";
             this.grid.RowCount = 2;
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.88889F));
             this.grid.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.11111F));
-            this.grid.Size = new System.Drawing.Size(1081, 601);
+            this.grid.Size = new System.Drawing.Size(811, 488);
             this.grid.TabIndex = 0;
             this.grid.Paint += new System.Windows.Forms.PaintEventHandler(this.MainView_Load);
             // 
             // movieList
             // 
+            this.movieList.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.movieList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.movieList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.movieList.FormattingEnabled = true;
-            this.movieList.ItemHeight = 16;
-            this.movieList.Location = new System.Drawing.Point(233, 69);
-            this.movieList.Margin = new System.Windows.Forms.Padding(4);
+            this.movieList.Location = new System.Drawing.Point(175, 56);
             this.movieList.Name = "movieList";
-            this.movieList.Size = new System.Drawing.Size(159, 116);
+            this.movieList.Size = new System.Drawing.Size(120, 91);
             this.movieList.TabIndex = 1;
             this.movieList.SelectedIndexChanged += new System.EventHandler(this.ListMovies);
             this.movieList.DoubleClick += new System.EventHandler(this.movieList_DoubleClick);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 601);
+            this.ClientSize = new System.Drawing.Size(811, 488);
             this.Controls.Add(this.grid);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Form1";
             this.grid.ResumeLayout(false);
