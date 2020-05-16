@@ -12,6 +12,13 @@ namespace CinemaProject.Model.Repository
 {
     public class ShowTimeRepository
     {
+        private readonly TheaterRoomsRepository _theaterRoomsRepository;
+
+        public ShowTimeRepository()
+        {
+            _theaterRoomsRepository = new TheaterRoomsRepository();
+        }
+
         public List<ShowTimeView> GetAll()
         {
             var pathToJsonFile = GetPathToJson();
@@ -27,6 +34,7 @@ namespace CinemaProject.Model.Repository
             return items;
         }
 
+
         public ShowTimeView GetShowTime(int id_movieShowTime)
         {
             var allShowTimesForMovie = GetAll();
@@ -35,10 +43,32 @@ namespace CinemaProject.Model.Repository
             return showtime;
         }
 
-        public List<ShowTimeView> GetAllShowTimesForMovie(int id_Movie)
+        public List<ShowTimeView> GetAllShowTimesForMovie(int id_movie)
         {
-            var allShowTimes = GetAll();
-            return allShowTimes.Where(x => x.Id_Movie == id_Movie).ToList();
+            
+            List<ShowTimeView> times = new List<ShowTimeView>();
+            List<string> takenchair = new List<string>();
+
+            var allShowTime = GetAll();
+            var showtimes = allShowTime.Where(x => x.Id_Movie == id_movie).ToList();
+
+
+
+            
+           
+
+            foreach ( ShowTimeView showTime in showtimes)
+            {
+                var chairsOfRoom = _theaterRoomsRepository.GetTheaterRoom(showTime.Id_TheaterRoom);
+                var takenchairsMovie = showTime.TakenChairs;
+                if (takenchairsMovie.Count() != chairsOfRoom.AllChairs.Count())
+                {
+                    times.Add(showTime);
+                }
+
+            }
+            return times;
+            
         }
 
         public void AddNewTakenChairs(List<string> chairs, int id_movieShowTime)
