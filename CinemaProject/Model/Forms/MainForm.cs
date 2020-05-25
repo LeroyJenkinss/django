@@ -21,17 +21,28 @@ namespace CinemaProject
         public MainForm()
         {
             InitializeComponent();
-            _moviesRepository = new MoviesRepository();
+          //  {
+
+           //     this.pictureBox1 = new System.Windows.Forms.PictureBox();
+           //     this.label1 = new System.Windows.Forms.Label();
+                //this.OmschrijvingMovie = new System.Windows.Forms.RichTextBox();;
+              _moviesRepository = new MoviesRepository();
+//}
         }
 
         private void MainView_Load(object sender, PaintEventArgs e)
         {
+            movieGridView.Columns.Add("ID","");
+            movieGridView.Columns.Add("MovieName", "Name");
+
+
             var allMovies = _moviesRepository.GetAll();
             foreach (MovieView i in allMovies)
             {
-                movieList.Items.Add(i.Id_Movie+": "+i.Name);
-                movieList.Items.Add(i.Genre);
+                movieGridView.Rows.Add(new object[] { i.Id_Movie , i.Name });
+              
             }
+
 
 
         }
@@ -39,10 +50,10 @@ namespace CinemaProject
         {
         }
 
-        private void movieList_DoubleClick(object sender, EventArgs e)
+        private void MovieGridView_DoubleClick(object sender, EventArgs e)
         {
-            string selectedItem = movieList.Items[movieList.SelectedIndex].ToString();
-            var GetMovieId = selectedItem.Split(':')[0];
+            var selectedItem = movieGridView.CurrentRow.AccessibilityObject.Value;
+            var GetMovieId = selectedItem.Split(';')[0];
             var MovieForm = new MovieForm(int.Parse(GetMovieId));
             MovieForm.Show();
         }
