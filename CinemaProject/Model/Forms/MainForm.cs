@@ -17,9 +17,11 @@ namespace CinemaProject
     public partial class MainForm : Form
     {
         private readonly MoviesRepository _moviesRepository;
+        private bool movieGridViewIsLoaded = false;
 
         public MainForm()
         {
+
             InitializeComponent();
           //  {
 
@@ -32,19 +34,20 @@ namespace CinemaProject
 
         private void MainView_Load(object sender, PaintEventArgs e)
         {
-            movieGridView.Columns.Add("ID","");
-            movieGridView.Columns.Add("MovieName", "Name");
-
-
-            var allMovies = _moviesRepository.GetAll();
-            foreach (MovieView i in allMovies)
+            if (!movieGridViewIsLoaded)
             {
-                movieGridView.Rows.Add(new object[] { i.Id_Movie , i.Name });
-              
+                movieGridView.Columns.Add("ID", "");
+                movieGridView.Columns.Add("MovieName", "Name");
+
+                var allMovies = _moviesRepository.GetAll();
+                foreach (MovieView i in allMovies)
+                {
+                    movieGridView.Rows.Add(new object[] { i.Id_Movie, i.Name });
+
+                }
+
+                movieGridViewIsLoaded = true;
             }
-
-
-
         }
         private void ListMovies(object sender, EventArgs e)
         {
@@ -54,8 +57,11 @@ namespace CinemaProject
         {
             var selectedItem = movieGridView.CurrentRow.AccessibilityObject.Value;
             var GetMovieId = selectedItem.Split(';')[0];
-            var MovieForm = new MovieForm(int.Parse(GetMovieId));
-            MovieForm.Show();
+            var movieForm = new MovieForm(int.Parse(GetMovieId));
+            movieForm.Location = this.Location;
+            movieForm.FormClosing += delegate { this.Show();  };
+            movieForm.Show();
+            this.Hide();
         }
     }
 }
