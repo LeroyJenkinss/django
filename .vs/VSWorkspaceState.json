@@ -9,6 +9,6 @@
     "\\CinemaProject\\Model\\Repository",
     "\\CinemaProject\\Objects"
   ],
-  "SelectedNode": "\\CinemaProject\\Model\\Forms\\MovieForm.cs",
+  "SelectedNode": "\\CinemaProject\\Data\\AllMovies.json",
   "PreviewInSolutionExplorer": false
 }
