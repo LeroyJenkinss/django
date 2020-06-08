@@ -38,20 +38,39 @@ namespace CinemaProject
             {
                 movieGridView.Columns.Add("ID", "");
                 movieGridView.Columns.Add("MovieName", "Name");
+                var ImageResizeCell = new DataGridViewImageColumn(false);
+               
+
+                movieGridView.Columns.Add(ImageResizeCell);
+                movieGridView.Columns.Add("Omschrijving","Omschrijving");
 
                 var allMovies = _moviesRepository.GetAll();
                 foreach (MovieView i in allMovies)
                 {
-                    movieGridView.Rows.Add(new object[] { i.Id_Movie, i.Name });
+                    System.Net.WebRequest request =
+                    System.Net.WebRequest.Create(i.Picture);
+                    System.Net.WebResponse response = request.GetResponse();
+                    System.IO.Stream responseStream = response.GetResponseStream();
+                    Bitmap picture = new Bitmap(responseStream);
+                    Image imageResize = picture;
+                    Bitmap picture2Size = new Bitmap(imageResize, new Size(175, 250));
+
+                    movieGridView.Rows.Add(new object[] { i.Id_Movie, i.Name, picture2Size, i.Description});
+                   
 
                 }
-
+                movieGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+                movieGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+                movieGridView.AutoResizeRows(DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders) ;
                 movieGridViewIsLoaded = true;
             }
+            
         }
-        private void ListMovies(object sender, EventArgs e)
-        {
-        }
+      
+
+        
+
+        
 
         private void MovieGridView_DoubleClick(object sender, EventArgs e)
         {

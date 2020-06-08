@@ -29,23 +29,14 @@
             /// </summary>
             private void InitializeComponent()
         {
-            this.movieList = new System.Windows.Forms.ListBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new System.Windows.Forms.TableLayoutPanel();
-          //  this.pictureBox1 = new System.Windows.Forms.PictureBox();
-           //this.textBox1 = new System.Windows.Forms.TextBox();
-          //  this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.movieGridView = new System.Windows.Forms.DataGridView();
-         //   ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // movieList
-            // 
-            this.movieList.Location = new System.Drawing.Point(0, 0);
-            this.movieList.Name = "movieList";
-            this.movieList.Size = new System.Drawing.Size(120, 95);
-            this.movieList.TabIndex = 7;
             // 
             // grid
             // 
@@ -62,64 +53,67 @@
             this.grid.TabIndex = 0;
             this.grid.Paint += new System.Windows.Forms.PaintEventHandler(this.MainView_Load);
             // 
-            // pictureBox1
-            // 
-        //    this.pictureBox1.Location = new System.Drawing.Point(12, 81);
-        //    this.pictureBox1.Name = "pictureBox1";
-        //    this.pictureBox1.Size = new System.Drawing.Size(162, 99);
-         //   this.pictureBox1.TabIndex = 2;
-        //    this.pictureBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-      //      this.textBox1.Location = new System.Drawing.Point(213, 159);
-       //     this.textBox1.Name = "textBox1";
-       //     this.textBox1.Size = new System.Drawing.Size(180, 20);
-       //     this.textBox1.TabIndex = 3;
-            // 
-            // linkLabel1
-            // 
-       //     this.linkLabel1.AutoSize = true;
-      //      this.linkLabel1.Location = new System.Drawing.Point(213, 89);
-      //      this.linkLabel1.Name = "linkLabel1";
-      //      this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-      //      this.linkLabel1.TabIndex = 4;
-      //      this.linkLabel1.TabStop = true;
-      //      this.linkLabel1.Text = "linkLabel1";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(213, 120);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(335, 39);
             this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.label1.Text = "Welkom bij ChinaMa";
             // 
             // movieGridView
             // 
+            this.movieGridView.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.movieGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.movieGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.movieGridView.Location = new System.Drawing.Point(12, 208);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.movieGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.movieGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.movieGridView.Location = new System.Drawing.Point(12, 51);
             this.movieGridView.Name = "movieGridView";
-            this.movieGridView.Size = new System.Drawing.Size(629, 510);
-            this.movieGridView.TabIndex = 6;
+              dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+                dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+                dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+                dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+                dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+                dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            /*      this.movieGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+                this.movieGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Transparent;
+                this.movieGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Transparent;
+                this.movieGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Transparent;
+                this.movieGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Transparent;*/
+            this.movieGridView.Size = new System.Drawing.Size(799, 667);
+            this.movieGridView.TabIndex = 6; 
             this.movieGridView.DoubleClick += new System.EventHandler(this.MovieGridView_DoubleClick);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(811, 730);
             this.Controls.Add(this.movieGridView);
             this.Controls.Add(this.label1);
-       //     this.Controls.Add(this.linkLabel1);
-      //      this.Controls.Add(this.textBox1);
-      //      this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.movieList);
             this.Controls.Add(this.grid);
             this.Name = "MainForm";
             this.Text = "Form1";
-       //     ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.movieGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -127,7 +121,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListBox movieList;
+       // private System.Windows.Forms.ListBox movieList;
         private System.Windows.Forms.TableLayoutPanel grid;
      //   private System.Windows.Forms.PictureBox pictureBox1;
      //   private System.Windows.Forms.TextBox textBox1;
