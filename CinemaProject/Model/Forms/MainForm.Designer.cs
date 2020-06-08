@@ -87,20 +87,16 @@
             this.movieGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.movieGridView.Location = new System.Drawing.Point(12, 51);
             this.movieGridView.Name = "movieGridView";
-              dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-                dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-                dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-                dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-                dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-                dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            /*      this.movieGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-                this.movieGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Transparent;
-                this.movieGridView.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Transparent;
-                this.movieGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Transparent;
-                this.movieGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Transparent;*/
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.movieGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.movieGridView.Size = new System.Drawing.Size(799, 667);
-            this.movieGridView.TabIndex = 6; 
+            this.movieGridView.TabIndex = 6;
             this.movieGridView.DoubleClick += new System.EventHandler(this.MovieGridView_DoubleClick);
             // 
             // MainForm
