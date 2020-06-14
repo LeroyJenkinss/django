@@ -50,7 +50,10 @@ namespace CinemaProject.Model.Forms
             string selectedItem = ShowtimeList.Items[ShowtimeList.SelectedIndex].ToString();
             var GetMovieShowtimeId = selectedItem.Split(':')[0];
             var ReservationForm = new ReservationForm(int.Parse(GetMovieShowtimeId));
+            ReservationForm.Location = this.Location;
+            ReservationForm.FormClosing += delegate { this.Show(); };
             ReservationForm.Show();
+            this.Hide();
         }
 
         private void label2_Click(object sender, EventArgs e)
